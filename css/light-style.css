@@ -167,6 +167,7 @@ ul {
   font-size: 1.5rem;
   color: var(--brand-700);
 }
+/* Desktop navigation is now the default */
 .nav__list {
   display: flex;
   gap: var(--space-8);
@@ -838,9 +839,11 @@ ul {
     transition: right 0.4s ease-in-out;
     padding-top: 100px;
     z-index: 999;
+    display: none;
   }
   .nav.active {
     right: 0;
+    display: block;
   }
   .nav__list {
     flex-direction: column;
