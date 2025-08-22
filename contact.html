@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Fortrust</title>
+    <meta
+      name="description"
+      content="Get in touch with a Fortrust counsellor. Find our office locations, email, and WhatsApp details."
+    />
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="/" class="header__logo">FORTRUST</a>
+        <nav class="nav" id="main-nav">
+          <ul class="nav__list">
+            <li>
+              <a href="/destinations.html" class="nav__link">Destinations</a>
+            </li>
+            <li><a href="/programs.html" class="nav__link">Programs</a></li>
+            <li><a href="/services.html" class="nav__link">Services</a></li>
+            <li>
+              <a href="/success.html" class="nav__link">Success Stories</a>
+            </li>
+            <li><a href="/events.html" class="nav__link">Events</a></li>
+            <li><a href="/about.html" class="nav__link">About</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <div class="lang-switcher"><span>EN</span> | <a href="#">ID</a></div>
+          <a href="/contact.html" class="btn btn--primary">Book Free Consultation</a>
+          <a href="#" class="whatsapp-icon"
+            ><i data-lucide="message-circle"></i
+          ></a>
+          <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Get in Touch</h1>
+          <p>
+            We're here to help. Reach out to us via the form below, or contact
+            one of our offices directly.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="container contact-section__container">
+          <div class="contact-form-wrapper">
+            <h3>Send us a Message</h3>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">Submit</button>
+            </form>
+          </div>
+          <div class="contact-details-wrapper">
+            <h3>Contact Information</h3>
+            <div class="contact-info-item">
+              <i data-lucide="mail"></i>
+              <div>
+                <h4>General Enquiries</h4>
+                <p>info@fortrust.com</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i data-lucide="message-circle"></i>
+              <div>
+                <h4>WhatsApp</h4>
+                <p>+62 812 3456 7890</p>
+              </div>
+            </div>
+            <hr />
+            <h3>Our Offices</h3>
+            <div class="office-location">
+              <h4>Jakarta, Indonesia</h4>
+              <p>
+                123 Education St, Jakarta CBD<br />Mon - Fri, 9:00 AM - 5:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__main">
+          <div class="footer__about">
+            <h4>FORTRUST</h4>
+            <p>
+              Your trusted partner in international education for over 30 years.
+            </p>
+            <div class="footer__socials">
+              <a href="#" aria-label="Facebook"
+                ><i data-lucide="facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i data-lucide="instagram"></i
+              ></a>
+              <a href="#" aria-label="Linkedin"
+                ><i data-lucide="linkedin"></i
+              ></a>
+              <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer__links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Offices</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer__links">
+            <h4>Destinations</h4>
+            <ul>
+              <li><a href="#">Australia</a></li>
+              <li><a href="#">United Kingdom</a></li>
+              <li><a href="#">New Zealand</a></li>
+              <li><a href="#">Singapore</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <h4>Contact Us</h4>
+            <p><i data-lucide="mail"></i> info@fortrust.com</p>
+            <p><i data-lucide="phone"></i> +62 21 1234 5678</p>
+            <p>
+              <i data-lucide="message-circle"></i> +62 812 3456 7890 (WhatsApp)
+            </p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>
+            &copy; <span id="current-year"></span> Fortrust. All rights
+            reserved.
+          </p>
+          <div class="footer__legal">
+            <a href="#">Privacy Policy</a>
+            <span>|</span>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
