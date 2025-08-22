@@ -1,10 +1,12 @@
 /* 1. SETUP & DESIGN SYSTEM */
-/* ------------------------- */
 :root {
-  --brand-700: #0f2d5c;
-  --brand-500: #2563eb;
-  --brand-100: #dbeafe;
-  --accent: #10b981;
+  /* --- COLOR PALETTE UPDATED --- */
+  --brand-700: #10b981; /* Primary color is now Green */
+  --brand-500: #34d399; /* A lighter green for links/hovers */
+  --brand-100: #d1fae5; /* A very light green for backgrounds */
+  --accent: #0f2d5c; /* Accent color is now Navy */
+  /* --- END OF UPDATE --- */
+
   --warn: #f59e0b;
   --error: #dc2626;
   --neutral-900: #081220;
@@ -223,7 +225,7 @@ ul {
   padding: 5rem 0;
   text-align: center;
   color: var(--bg);
-  background-color: var(--brand-700);
+  background-image: linear-gradient(45deg, var(--brand-700), var(--brand-500));
   background-size: cover;
   background-position: center;
   position: relative;
@@ -235,7 +237,8 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(15, 45, 92, 0.7);
+  background-color: rgba(16, 185, 129, 0.7);
+  opacity: 0; /* Hide the old overlay */
 }
 .page-header .container {
   position: relative;
@@ -475,7 +478,7 @@ ul {
   display: none;
 }
 .final-cta {
-  background-color: var(--brand-700);
+  background-image: linear-gradient(45deg, var(--brand-700), var(--brand-500));
   color: var(--bg);
   text-align: center;
 }
@@ -489,12 +492,14 @@ ul {
   margin: var(--space-4) auto var(--space-8);
   opacity: 0.9;
 }
+/* This button now uses the accent color (navy) */
 .final-cta .btn--primary {
   background-color: var(--accent);
-  color: var(--brand-700);
+  color: var(--bg);
 }
 .final-cta .btn--primary:hover {
   background-color: var(--bg);
+  color: var(--accent);
 }
 
 /* 6. DESTINATIONS PAGE */
@@ -739,7 +744,7 @@ ul {
   font-size: 1.1rem;
 }
 .checklist i {
-  color: var(--accent);
+  color: var(--brand-700); /* Changed from accent */
 }
 .fees-info {
   background: var(--brand-100);
