@@ -125,6 +125,16 @@ ul {
   background-color: var(--brand-100);
   color: var(--brand-700);
 }
+.btn--accent {
+  color: var(--brand-700);
+  background-color: var(--accent);
+}
+.btn--accent:hover {
+  color: var(--accent);
+  background-color: transparent;
+  border-color: var(--accent);
+}
+
 .btn--large {
   padding: var(--space-4) var(--space-8);
   font-size: 1.1rem;
@@ -1439,5 +1449,61 @@ ul {
   .nav-item--dropdown:hover .dropdown-menu,
   .nav-item--dropdown .dropdown-icon {
     display: none; /* Sembunyikan dropdown di mode hamburger */
+  }
+}
+
+/* 18. MOBILE NAVIGATION DROPDOWN */
+/* ------------------------- */
+
+@media (max-width: 1024px) {
+  /* Hapus aturan yang menyembunyikan dropdown di mobile */
+  .nav-item--dropdown:hover .dropdown-menu,
+  .nav-item--dropdown .dropdown-icon {
+    display: inline-block; /* Pastikan ikon tetap terlihat */
+  }
+
+  /* Ubah link dropdown menjadi tombol */
+  .nav .nav-item--dropdown > .nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Sembunyikan dropdown desktop di mobile */
+  .nav-item--dropdown .dropdown-menu {
+    display: block; /* Ganti dari none ke block */
+    position: static; /* Hapus posisi absolut */
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: auto;
+    background-color: transparent;
+
+    /* Sembunyikan dengan max-height untuk transisi */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  /* Styling untuk item di dalam mobile dropdown */
+  .dropdown-menu a {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 12px 40px; /* Beri indentasi */
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* Tampilkan dropdown saat parent-nya aktif */
+  .nav-item--dropdown.active .dropdown-menu {
+    max-height: 500px; /* Atur tinggi maksimal yang cukup */
+    padding-top: 10px;
+  }
+
+  /* Putar ikon panah saat aktif */
+  .nav-item--dropdown.active .dropdown-icon {
+    transform: rotate(180deg);
   }
 }
