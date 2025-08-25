@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
@@ -23,7 +27,9 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <a href="index.html" class="header__logo">FORTRUST</a>
+        <a href="index.html" class="header__logo">
+          <img src="./public/logo-fortrust.png" height="45" alt="" />
+        </a>
         <nav class="nav" id="main-nav">
           <ul class="nav__list">
             <li>
@@ -40,7 +46,7 @@
         </nav>
         <div class="header__actions">
           <div class="lang-switcher"><span>EN</span> | <a href="#">ID</a></div>
-          <a href="contact.html" class="btn btn--primary">Book Free Consultation</a>
+          <a href="contact.html" class="btn btn--primary">Free Consultation</a>
           <a href="#" class="whatsapp-icon"
             ><i data-lucide="message-circle"></i
           ></a>
@@ -52,7 +58,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container hero__container">
           <h1>Study Abroad, Simplified.</h1>
           <p class="subhead">
@@ -67,6 +73,90 @@
               >Explore Destinations</a
             >
           </div>
+        </div>
+      </section> -->
+      <section class="hero-carousel">
+        <div class="carousel-wrapper">
+          <!-- Slide 1 -->
+          <div
+            class="carousel-slide active"
+            style="background-image: url('./public/banner1.jpg')"
+          >
+            <div class="slide-content">
+              <h1>Study Abroad, Simplified.</h1>
+              <p class="subhead">
+                Get expert counselling, applications, visas, and pre-departure
+                support - in one place.
+              </p>
+              <div class="hero__cta">
+                <a href="contact.html" class="btn btn--primary btn--large"
+                  >Book a Free Consultation</a
+                >
+                <a href="#destinations" class="btn btn--secondary btn--large"
+                  >Explore Destinations</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div
+            class="carousel-slide"
+            style="background-image: url('./public/banner2.jpg')"
+          >
+            <div class="slide-content">
+              <h1>Your Future, Global.</h1>
+              <p class="subhead">
+                Discover top universities in Australia, the UK, and beyond with
+                our expert guidance.
+              </p>
+              <div class="hero__cta">
+                <a href="contact.html" class="btn btn--primary btn--large"
+                  >Talk to an Expert</a
+                >
+                <a href="programs.html" class="btn btn--secondary btn--large"
+                  >Find a Program</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div
+            class="carousel-slide"
+            style="background-image: url('./public/banner3.jpg')"
+          >
+            <div class="slide-content">
+              <h1>Join Our Success Stories.</h1>
+              <p class="subhead">
+                Thousands of students have trusted us for over 30 years. You're
+                next.
+              </p>
+              <div class="hero__cta">
+                <a href="contact.html" class="btn btn--primary btn--large"
+                  >Start Your Journey</a
+                >
+                <a href="success.html" class="btn btn--secondary btn--large"
+                  >Read Stories</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigasi Carousel -->
+        <div class="carousel-nav">
+          <button class="carousel-btn prev">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="carousel-btn next">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Dots Indikator -->
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
         </div>
       </section>
 
@@ -195,7 +285,7 @@
           <div class="destinations__grid">
             <div class="card dest-card">
               <img
-                src="https://via.placeholder.com/400x250/cccccc/000000?text=Australia"
+                src="./public/destinations/australia.jpg"
                 alt="Scenic view of Sydney, Australia"
               />
               <div class="card__content">
@@ -209,21 +299,49 @@
             </div>
             <div class="card dest-card">
               <img
-                src="https://via.placeholder.com/400x250/cccccc/000000?text=UK"
-                alt="Iconic view of London, UK"
+                src="./public/destinations/canada.jpg"
+                alt="Scenic view of Canada"
               />
               <div class="card__content">
-                <h3>United Kingdom</h3>
+                <h3>Canada</h3>
                 <p>
-                  Home to historic universities with a legacy of academic
-                  excellence.
+                  World-class education, vibrant cities, and stunning natural
+                  landscapes.
                 </p>
                 <a href="#">Learn More <i data-lucide="arrow-right"></i></a>
               </div>
             </div>
             <div class="card dest-card">
               <img
-                src="https://via.placeholder.com/400x250/cccccc/000000?text=New+Zealand"
+                src="./public/destinations/china.jpg"
+                alt="Scenic view of China"
+              />
+              <div class="card__content">
+                <h3>China</h3>
+                <p>
+                  World-class education, vibrant cities, and stunning natural
+                  landscapes.
+                </p>
+                <a href="#">Learn More <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="card dest-card">
+              <img
+                src="./public/destinations/malaysia.jpg"
+                alt="Scenic view of Malaysia"
+              />
+              <div class="card__content">
+                <h3>Malaysia</h3>
+                <p>
+                  World-class education, vibrant cities, and stunning natural
+                  landscapes.
+                </p>
+                <a href="#">Learn More <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="card dest-card">
+              <img
+                src="./public/destinations/newzealand.jpg"
                 alt="Beautiful landscape of New Zealand"
               />
               <div class="card__content">
@@ -237,7 +355,7 @@
             </div>
             <div class="card dest-card">
               <img
-                src="https://via.placeholder.com/400x250/cccccc/000000?text=Singapore"
+                src="./public/destinations/singapore.jpg"
                 alt="Modern skyline of Singapore"
               />
               <div class="card__content">
@@ -245,6 +363,48 @@
                 <p>
                   A global hub of technology, finance, and multicultural
                   experiences.
+                </p>
+                <a href="#">Learn More <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="card dest-card">
+              <img
+                src="./public/destinations/switzerland.jpg"
+                alt="Modern skyline of Switzerland"
+              />
+              <div class="card__content">
+                <h3>Switzerland</h3>
+                <p>
+                  A global hub of technology, finance, and multicultural
+                  experiences.
+                </p>
+                <a href="#">Learn More <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="card dest-card">
+              <img
+                src="./public/destinations/uk.jpg"
+                alt="Iconic view of London, UK"
+              />
+              <div class="card__content">
+                <h3>United Kingdom</h3>
+                <p>
+                  Home to historic universities with a legacy of academic
+                  excellence.
+                </p>
+                <a href="#">Learn More <i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="card dest-card">
+              <img
+                src="./public/destinations/usa.jpg"
+                alt="Iconic view of United States of America"
+              />
+              <div class="card__content">
+                <h3>United States of America</h3>
+                <p>
+                  Home to historic universities with a legacy of academic
+                  excellence.
                 </p>
                 <a href="#">Learn More <i data-lucide="arrow-right"></i></a>
               </div>
@@ -315,7 +475,9 @@
       <div class="container footer__container">
         <div class="footer__main">
           <div class="footer__about">
-            <h4>FORTRUST</h4>
+            <h4>
+              <img src="./public/logo-fortrust.png" height="50" alt="" />
+            </h4>
             <p>
               Your trusted partner in international education for over 30 years.
             </p>
@@ -326,9 +488,24 @@
               <a href="#" aria-label="Instagram"
                 ><i data-lucide="instagram"></i
               ></a>
-              <a href="#" aria-label="Linkedin"
-                ><i data-lucide="linkedin"></i
-              ></a>
+              <a href="#" aria-label="Tiktok"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE -->
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 7.917v4.034A9.95 9.95 0 0 1 16 10v4.5a6.5 6.5 0 1 1-8-6.326V12.5a2.5 2.5 0 1 0 4 2V3h4.083A6.005 6.005 0 0 0 21 7.917"
+                  />
+                </svg>
+              </a>
               <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
             </div>
           </div>
@@ -371,6 +548,17 @@
           </div>
         </div>
       </div>
+      <a
+        href="https://wa.me/62818282817?text=Hello%20Fortrust,%20I%20have%20a%20question."
+        class="floating-whatsapp visible"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+      >
+        <div class="whatsapp-content">
+          <i data-lucide="message-circle"></i>
+          <span class="whatsapp-text">How can I help you?</span>
+        </div>
+      </a>
     </footer>
 
     <script src="js/script.js"></script>

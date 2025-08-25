@@ -14,7 +14,7 @@
   --neutral-400: #94a3b8;
   --neutral-100: #f1f5f9;
   --bg: #ffffff;
-  --font-primary: "Plus Jakarta Sans", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -166,13 +166,23 @@ ul {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--brand-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.header__logo img {
+  object-fit: cover;
+  object-position: 0%;
+}
+
 /* Desktop navigation is now the default */
 .nav__list {
   display: flex;
   gap: var(--space-8);
 }
 .nav__link {
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--neutral-700);
   padding: var(--space-2) 0;
@@ -851,7 +861,7 @@ ul {
     gap: var(--space-6);
   }
   .nav__link {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .hamburger {
     display: block;
@@ -1149,5 +1159,285 @@ ul {
   }
   .contact-section__container {
     grid-template-columns: 1fr;
+  }
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Tinggi carousel, bisa disesuaikan */
+  overflow: hidden;
+  padding: 0; /* Menghapus padding default dari section */
+}
+
+.carousel-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Overlay gelap agar teks terbaca */
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 800px;
+  padding: 0 var(--space-6);
+}
+
+.slide-content h1 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: var(--space-4);
+}
+
+.slide-content .subhead {
+  color: white;
+  opacity: 0.9;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-8);
+}
+
+.slide-content .btn--secondary {
+  border-color: white;
+  color: white;
+}
+
+.slide-content .btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Tombol Navigasi Prev/Next */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 var(--space-8);
+  z-index: 3;
+}
+
+.carousel-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Dots Indikator */
+.carousel-dots {
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-3);
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+/* Responsive untuk Carousel */
+@media (max-width: 768px) {
+  .hero-carousel {
+    height: 80vh;
+  }
+  .slide-content h1 {
+    font-size: 2.5rem;
+  }
+  .carousel-nav {
+    padding: 0 var(--space-4);
+  }
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 16. FLOATING WHATSAPP CTA */
+/* ------------------------- */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  background-color: #25d366; /* Warna hijau WhatsApp */
+  color: white;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.floating-whatsapp.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-content {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  color: white;
+}
+
+.whatsapp-content i {
+  margin-right: var(--space-2);
+}
+
+.whatsapp-text {
+  transition: all 0.3s ease;
+}
+
+/* Sembunyikan teks di layar kecil, hanya tampilkan ikon */
+@media (max-width: 768px) {
+  .whatsapp-text {
+    display: none;
+  }
+  .floating-whatsapp {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .whatsapp-content i {
+    margin-right: 0;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* 17. NAVIGATION DROPDOWN */
+/* ------------------------- */
+.nav-item--dropdown {
+  position: relative;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  padding: var(--space-2);
+  min-width: 200px;
+  z-index: 1010;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item--dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-item--dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: var(--space-3);
+  color: var(--neutral-700);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--neutral-100);
+  color: var(--brand-700);
+}
+
+/* Teks "and many more" */
+.and-many-more {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-style: italic;
+  color: var(--neutral-400);
+}
+
+/* Penyesuaian untuk dropdown di mobile */
+@media (max-width: 1024px) {
+  .nav-item--dropdown:hover .dropdown-menu,
+  .nav-item--dropdown .dropdown-icon {
+    display: none; /* Sembunyikan dropdown di mode hamburger */
   }
 }
