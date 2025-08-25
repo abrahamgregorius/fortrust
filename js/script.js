@@ -1,3 +1,16 @@
+/**
+ * Main script for Fortrust Website Interactivity
+ *
+ * This script handles:
+ * 1. Sticky Header
+ * 2. Mobile Navigation (Hamburger & Dropdowns)
+ * 3. Hero Carousel
+ * 4. Testimonials Slider
+ * 5. Destination Page Tabs
+ * 6. Floating WhatsApp Button
+ * 7. Dynamic Copyright Year
+ * 8. Icon Initialization
+ */
 document.addEventListener("DOMContentLoaded", function () {
   // --- 1. ELEMENT SELECTORS ---
   // Group all element selections at the top for easier management.
@@ -5,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     header: document.querySelector(".header"),
     hamburgerBtn: document.getElementById("hamburger-btn"),
     navMenu: document.getElementById("main-nav"),
-    dropdownItem: document.querySelector(".nav-item--dropdown"),
+    dropdownItems: document.querySelectorAll(".nav-item--dropdown"),
     carousel: document.querySelector(".hero-carousel"),
     testimonialSliderWrapper: document.querySelector(".slider__wrapper"),
     tabsContainer: document.querySelector(".tabs-nav"),
@@ -34,11 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function initStickyHeader() {
     if (!elements.header) return;
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        elements.header.classList.add("scrolled");
-      } else {
-        elements.header.classList.remove("scrolled");
-      }
+      elements.header.classList.toggle("scrolled", window.scrollY > 50);
     });
   }
 
@@ -50,30 +59,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hamburger toggle logic
     elements.hamburgerBtn.addEventListener("click", () => {
-      elements.navMenu.classList.toggle("active");
+      const isActive = elements.navMenu.classList.toggle("active");
       const menuIcon = elements.hamburgerBtn.querySelector("i");
-      if (elements.navMenu.classList.contains("active")) {
-        menuIcon.setAttribute("data-lucide", "x");
-      } else {
-        menuIcon.setAttribute("data-lucide", "menu");
-        // Close dropdown if menu is closed
-        if (elements.dropdownItem) {
-          elements.dropdownItem.classList.remove("active");
-        }
-      }
+      
+      menuIcon.setAttribute("data-lucide", isActive ? "x" : "menu");
       lucide.createIcons();
+
+      // Close all dropdowns if the main menu is closed
+      if (!isActive) {
+        elements.dropdownItems.forEach(item => item.classList.remove("active"));
+      }
     });
 
-    // Mobile dropdown toggle logic
-    if (elements.dropdownItem) {
-      const dropdownLink = elements.dropdownItem.querySelector(".nav__link");
-      dropdownLink.addEventListener("click", function (e) {
+    // Mobile dropdown toggle logic for each dropdown item
+    elements.dropdownItems.forEach(item => {
+      const link = item.querySelector('.nav__link');
+      link.addEventListener('click', function(e) {
+        // Only activate click behavior on mobile
         if (window.innerWidth <= 1024) {
           e.preventDefault(); // Prevent page navigation on tap
-          elements.dropdownItem.classList.toggle("active");
+          
+          // Close other open dropdowns before opening the new one
+          elements.dropdownItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+          });
+
+          // Toggle the current dropdown
+          item.classList.toggle('active');
         }
       });
-    }
+    });
 
     // Close menu when a non-dropdown link is clicked
     elements.navMenu.querySelectorAll(".nav__link").forEach((link) => {
@@ -101,10 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let slideInterval;
 
     const goToSlide = (slideIndex) => {
-      slides.forEach((slide) => slide.classList.remove("active"));
-      dots.forEach((dot) => dot.classList.remove("active"));
-      slides[slideIndex].classList.add("active");
-      dots[slideIndex].classList.add("active");
+      slides.forEach((slide, index) => slide.classList.toggle("active", index === slideIndex));
+      dots.forEach((dot, index) => dot.classList.toggle("active", index === slideIndex));
       currentSlide = slideIndex;
     };
 
@@ -112,26 +127,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevSlide = () => goToSlide((currentSlide - 1 + slides.length) % slides.length);
     
     const startSlideShow = () => {
+      clearInterval(slideInterval); // Clear previous interval
       slideInterval = setInterval(nextSlide, 7000);
-    };
-
-    const resetInterval = () => {
-      clearInterval(slideInterval);
-      startSlideShow();
     };
 
     nextBtn.addEventListener("click", () => {
       nextSlide();
-      resetInterval();
+      startSlideShow(); // Reset interval on manual navigation
     });
     prevBtn.addEventListener("click", () => {
       prevSlide();
-      resetInterval();
+      startSlideShow(); // Reset interval on manual navigation
     });
-    dots.forEach((dot) => {
-      dot.addEventListener("click", (e) => {
-        goToSlide(parseInt(e.target.dataset.slide));
-        resetInterval();
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        goToSlide(index);
+        startSlideShow(); // Reset interval on manual navigation
       });
     });
 
@@ -145,24 +156,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!elements.testimonialSliderWrapper) return;
 
     const testimonials = [
-      {
-        quote: "Fortrust made my dream of studying in the UK a reality. Their end-to-end service was flawless, and my counsellor was incredibly supportive throughout the entire process.",
-        author: "Anya Lestari",
-        role: "UCL Alumni, UK (2024)",
-        img: "https://via.placeholder.com/50",
-      },
-      {
-        quote: "The guidance for my visa application was crystal clear. I was nervous, but the team handled everything professionally, making it a stress-free experience.",
-        author: "Budi Santoso",
-        role: "Monash University Student, Australia (2025)",
-        img: "https://via.placeholder.com/50",
-      },
-      {
-        quote: "As parents, we needed reassurance about the process and safety. Fortrust provided all the answers and secured great accommodation for our son. Highly recommended!",
-        author: "Mr. & Mrs. Wijaya",
-        role: "Parents of a UNSW Student, Australia (2024)",
-        img: "https://via.placeholder.com/50",
-      },
+      { quote: "Fortrust made my dream of studying in the UK a reality...", author: "Anya Lestari", role: "UCL Alumni, UK (2024)", img: "https://via.placeholder.com/50" },
+      { quote: "The guidance for my visa application was crystal clear...", author: "Budi Santoso", role: "Monash University Student, Australia (2025)", img: "https://via.placeholder.com/50" },
+      { quote: "As parents, we needed reassurance about the process and safety...", author: "Mr. & Mrs. Wijaya", role: "Parents of a UNSW Student, Australia (2024)", img: "https://via.placeholder.com/50" },
     ];
     let currentTestimonial = 0;
 
@@ -175,10 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <p class="testimonial-card__content">"${testimonial.quote}"</p>
           <div class="testimonial-card__author">
             <img src="${testimonial.img}" alt="Photo of ${testimonial.author}">
-            <div class="author-info">
-              <strong>${testimonial.author}</strong>
-              <p>${testimonial.role}</p>
-            </div>
+            <div class="author-info"><strong>${testimonial.author}</strong><p>${testimonial.role}</p></div>
           </div>`;
         elements.testimonialSliderWrapper.appendChild(card);
       });
@@ -186,8 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function show(index) {
       const slides = elements.testimonialSliderWrapper.querySelectorAll(".testimonial-card");
-      slides.forEach((slide) => slide.classList.remove("active"));
-      slides[index].classList.add("active");
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
     }
 
     const nextBtn = document.querySelector(".slider__btn--next");
@@ -220,13 +212,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!clickedTab) return;
       e.preventDefault();
 
-      tabLinks.forEach((link) => link.classList.remove("active"));
+      tabLinks.forEach(link => link.classList.remove("active"));
       clickedTab.classList.add("active");
 
       const tabId = clickedTab.dataset.tab;
-      tabPanes.forEach((pane) => {
-        pane.classList.toggle("active", pane.id === tabId);
-      });
+      tabPanes.forEach(pane => pane.classList.toggle("active", pane.id === tabId));
     });
   }
 
@@ -237,11 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // The code is here but commented out as in your original file.
     // if (elements.floatingWhatsApp) {
     //   window.addEventListener("scroll", () => {
-    //     if (window.scrollY > 300) {
-    //       elements.floatingWhatsApp.classList.add("visible");
-    //     } else {
-    //       elements.floatingWhatsApp.classList.remove("visible");
-    //     }
+    //     elements.floatingWhatsApp.classList.toggle("visible", window.scrollY > 300);
     //   });
     // }
   }

@@ -327,6 +327,11 @@ ul {
   letter-spacing: 1px;
   font-size: 0.9rem;
 }
+.partners__many {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--neutral-400);
+}
 .partners__scroller {
   width: 100%;
 }
