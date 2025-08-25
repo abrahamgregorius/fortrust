@@ -97,8 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!link.closest(".nav-item--dropdown")) {
         link.addEventListener("click", () => {
           elements.navMenu.classList.remove("active");
-          elements.hamburgerBtn.querySelector("i").setAttribute("data-lucide", "menu");
-          lucide.createIcons();
+          // FIX: Check if hamburger button and its icon exist before changing attributes
+          if (elements.hamburgerBtn) {
+            const menuIcon = elements.hamburgerBtn.querySelector("i");
+            if (menuIcon) {
+              menuIcon.setAttribute("data-lucide", "menu");
+              lucide.createIcons();
+            }
+          }
         });
       }
     });
@@ -224,7 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
    * Controls the visibility of the floating WhatsApp button.
    */
   function initFloatingWhatsApp() {
-    // The code is here but commented out as in your original file.
     // if (elements.floatingWhatsApp) {
     //   window.addEventListener("scroll", () => {
     //     elements.floatingWhatsApp.classList.toggle("visible", window.scrollY > 300);

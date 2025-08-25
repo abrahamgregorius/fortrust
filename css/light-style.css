@@ -713,7 +713,7 @@ ul {
 }
 .stepper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-8);
   text-align: center;
 }
@@ -1411,7 +1411,8 @@ ul {
   border-radius: 12px;
   box-shadow: var(--shadow-medium);
   padding: var(--space-2);
-  min-width: 200px;
+  min-width: 300px;
+  width: 100%;
   z-index: 1010;
   opacity: 0;
   transform: translateY(10px);
@@ -1434,6 +1435,7 @@ ul {
   color: var(--neutral-700);
   border-radius: 8px;
   font-weight: 500;
+  margin-bottom: .4rem;
 }
 
 .dropdown-menu a:hover {
@@ -1510,5 +1512,77 @@ ul {
   /* Putar ikon panah saat aktif */
   .nav-item--dropdown.active .dropdown-icon {
     transform: rotate(180deg);
+  }
+}
+
+/* 19. SERVICES PAGE - EXTRA SECTIONS */
+/* ------------------------- */
+.extra-services-section {
+  background-color: var(--neutral-100);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+}
+
+.service-card .card__content {
+  padding: var(--space-8);
+}
+
+.service-card h3 {
+  margin-bottom: var(--space-4);
+}
+
+.alumni-section {
+  background-color: var(--accent);
+  color: var(--bg);
+  text-align: center;
+}
+
+.alumni-section__container {
+  max-width: 700px;
+}
+
+.alumni-section h2,
+.alumni-section p {
+  color: var(--bg);
+}
+
+.alumni-section p {
+  margin: var(--space-4) 0 var(--space-8);
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.alumni-section .btn--primary {
+  background-color: var(--brand-700);
+}
+
+.alumni-section .btn--primary:hover {
+  background-color: var(--brand-500);
+}
+
+/* 20. MOBILE NAVIGATION FIXES */
+/* ------------------------- */
+@media (max-width: 1024px) {
+  /* FIX 1: Mengatur agar link tidak full-width, sehingga garis bawahnya pas */
+  .nav__list .nav__link {
+    display: inline-block; /* Membuat lebar link sesuai kontennya */
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* FIX 2: Memperbaiki transisi dropdown agar tidak merusak layout */
+  .nav-item--dropdown .dropdown-menu {
+    padding: 0; /* Hapus padding awal */
+    margin-top: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .nav-item--dropdown.active .dropdown-menu {
+    margin-top: 10px; /* Beri jarak hanya saat dropdown aktif */
+    padding-bottom: 10px;
   }
 }
