@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Fortrust</title>
-    <link rel="shortcut icon" href="./public/logo-small.png" type="image/x-icon">
+    <title>Find Your Program - Fortrust</title>
+    <link
+      rel="shortcut icon"
+      href="./public/logo-small.png"
+      type="image/x-icon"
+    />
     <meta
       name="description"
-      content="Get in touch with a Fortrust counsellor. Find our office locations, email, and WhatsApp details."
+      content="Search and filter thousands of undergraduate and postgraduate programs from top universities worldwide."
     />
 
     <!-- Google Fonts & Icons -->
@@ -30,7 +34,7 @@
     <header class="header">
       <div class="container header__container">
         <a href="index.html" class="header__logo">
-          <img src="./public/logo-fortrust.png" height="45" alt="">
+          <img src="./public/logo-fortrust.png" height="45" alt="" />
         </a>
         <nav class="nav" id="main-nav">
           <ul class="nav__list">
@@ -53,16 +57,16 @@
               </div>
             </li>
             <li class="nav-item--dropdown">
-                <a href="programs.html" class="nav__link">
-                    Test-Prep
-                    <i data-lucide="chevron-down" class="dropdown-icon"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="tests-interest.html">Interest and Aptitude Test</a>
-                    <a href="tests-language.html">Language Test Preparation</a>
-                    <a href="tests-language.html">Standardized Test Preparation</a>
-                    <a href="tests-language.html">Paket A, B, C</a>
-                </div>
+              <a href="programs.html" class="nav__link active">
+                Test-Prep
+                <i data-lucide="chevron-down" class="dropdown-icon"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="tests-interest.html">Interest and Aptitude Test</a>
+                <a href="tests-language.html">Language Test Preparation</a>
+                <a href="tests-standardized.html">Standardized Test Preparation</a>
+                <a href="tests-paket.html">Paket A, B, C</a>
+              </div>
             </li>
             <li><a href="services.html" class="nav__link">Services</a></li>
             <li>
@@ -84,62 +88,60 @@
         </div>
       </div>
     </header>
+
     <main>
-      <!-- Page Header -->
       <section class="page-header">
         <div class="container">
-          <h1>Get in Touch</h1>
+          <h1>Standardized Test Preparation</h1>
           <p>
-            We're here to help. Reach out to us via the form below, or contact
-            one of our offices directly.
+            Build a strong academic foundation and achieve top scores on your
+            standardized tests.
           </p>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section class="contact-section">
-        <div class="container contact-section__container">
-          <div class="contact-form-wrapper">
-            <h3>Send us a Message</h3>
-            <form class="contact-form">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary">Submit</button>
-            </form>
-          </div>
-          <div class="contact-details-wrapper">
-            <h3>Contact Information</h3>
-            <div class="contact-info-item">
-              <i data-lucide="mail"></i>
-              <div>
-                <h4>General Enquiries</h4>
-                <p>info@fortrust.com</p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <i data-lucide="message-circle"></i>
-              <div>
-                <h4>WhatsApp</h4>
-                <p>+62 812 3456 7890</p>
-              </div>
-            </div>
-            <hr />
-            <h3>Our Offices</h3>
-            <div class="office-location">
-              <h4>Jakarta, Indonesia</h4>
+      <section class="text-content-section">
+        <div class="container text-content-container">
+          <h2>Excel in Your Standardized Tests</h2>
+          <p>
+            Standardized tests like the GMAT, SAT, and Cambridge Levels are
+            critical components of your application to top universities and
+            business schools. Our preparation programs are designed to provide
+            you with a deep understanding of the test content, effective
+            strategies, and the practice needed to achieve a competitive score.
+          </p>
+
+          <h3>Our Programs Cover:</h3>
+          <ul>
+            <li>
+              <strong>GMAT/SAT:</strong> Comprehensive review of quantitative,
+              verbal, and analytical writing sections with a focus on
+              problem-solving strategies.
+            </li>
+            <li>
+              <strong>Cambridge O'level & A'level:</strong> In-depth subject
+              tutoring aligned with the Cambridge curriculum to ensure you
+              master the core concepts.
+            </li>
+          </ul>
+
+          <div
+            class="final-cta"
+            style="
+              padding: var(--space-12) 0;
+              margin-top: var(--space-8);
+              border-radius: var(--radius-card);
+            "
+          >
+            <div class="container final-cta__container">
+              <h2>Ready to Ace Your Test?</h2>
               <p>
-                123 Education St, Jakarta CBD<br />Mon - Fri, 9:00 AM - 5:00 PM
+                Join our preparation courses and build the skills you need for
+                success.
               </p>
+              <a href="contact.html" class="btn btn--primary btn--large"
+                >Inquire About Programs</a
+              >
             </div>
           </div>
         </div>
@@ -235,6 +237,7 @@
         </div>
       </a>
     </footer>
+
     <script src="js/script.js"></script>
     <script>
       lucide.createIcons();

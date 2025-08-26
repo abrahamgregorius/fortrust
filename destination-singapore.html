@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Fortrust</title>
+    <title>Study in Australia - Fortrust Destinations</title>
     <link rel="shortcut icon" href="./public/logo-small.png" type="image/x-icon">
     <meta
       name="description"
-      content="Get in touch with a Fortrust counsellor. Find our office locations, email, and WhatsApp details."
+      content="Explore entry requirements, costs, work rights, scholarships, and partner institutions for studying in Australia."
     />
 
-    <!-- Google Fonts & Icons -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +21,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icons (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Stylesheet -->
@@ -30,13 +32,13 @@
     <header class="header">
       <div class="container header__container">
         <a href="index.html" class="header__logo">
-          <img src="./public/logo-fortrust.png" height="45" alt="">
+          <img src="./public/logo-fortrust.png" height="45" alt="" />
         </a>
         <nav class="nav" id="main-nav">
           <ul class="nav__list">
             <!-- REVISI #5: Dropdown untuk Destinasi -->
             <li class="nav-item--dropdown">
-              <a href="#" class="nav__link"
+              <a href="#" class="nav__link active"
                 >Destinations
                 <i data-lucide="chevron-down" class="dropdown-icon"></i
               ></a>
@@ -53,15 +55,13 @@
               </div>
             </li>
             <li class="nav-item--dropdown">
-                <a href="programs.html" class="nav__link">
+                <a href="#" class="nav__link ">
                     Test-Prep
                     <i data-lucide="chevron-down" class="dropdown-icon"></i>
                 </a>
                 <div class="dropdown-menu">
                     <a href="tests-interest.html">Interest and Aptitude Test</a>
                     <a href="tests-language.html">Language Test Preparation</a>
-                    <a href="tests-language.html">Standardized Test Preparation</a>
-                    <a href="tests-language.html">Paket A, B, C</a>
                 </div>
             </li>
             <li><a href="services.html" class="nav__link">Services</a></li>
@@ -84,64 +84,90 @@
         </div>
       </div>
     </header>
+
     <main>
-      <!-- Page Header -->
       <section class="page-header">
         <div class="container">
-          <h1>Get in Touch</h1>
-          <p>
-            We're here to help. Reach out to us via the form below, or contact
-            one of our offices directly.
-          </p>
+          <h1>Study in Singapore</h1>
+          <p>A global hub for education, technology, and innovation.</p>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section class="contact-section">
-        <div class="container contact-section__container">
-          <div class="contact-form-wrapper">
-            <h3>Send us a Message</h3>
-            <form class="contact-form">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary">Submit</button>
-            </form>
+      <section class="destination-details">
+        <div class="container destination-details__container">
+          <div class="tabs-nav">
+            <button class="tab-link active" data-tab="overview"><i data-lucide="layout-grid"></i> Overview</button>
+            <button class="tab-link" data-tab="requirements"><i data-lucide="file-check-2"></i> Requirements</button>
+            <button class="tab-link" data-tab="costs"><i data-lucide="wallet"></i> Costs</button>
+            <button class="tab-link" data-tab="work"><i data-lucide="briefcase"></i> Work Rights</button>
+            <button class="tab-link" data-tab="scholarships"><i data-lucide="graduation-cap"></i> Scholarships</button>
+            <button class="tab-link" data-tab="partners"><i data-lucide="building-2"></i> Partners</button>
+            <button class="tab-link" data-tab="intakes"><i data-lucide="calendar-days"></i> Intakes</button>
           </div>
-          <div class="contact-details-wrapper">
-            <h3>Contact Information</h3>
-            <div class="contact-info-item">
-              <i data-lucide="mail"></i>
-              <div>
-                <h4>General Enquiries</h4>
-                <p>info@fortrust.com</p>
-              </div>
+          <div class="tab-content">
+            <div id="overview" class="tab-pane active">
+              <h2>Why Study in Singapore?</h2>
+              <p>Singapore is a vibrant, multicultural city-state renowned for its world-class education system, technological innovation, and safe, clean environment. It serves as a strategic gateway to Asia, offering unparalleled networking opportunities in business, finance, and technology.</p>
+              <h3>Unique Advantages</h3>
+              <ul>
+                <li><strong>Top-Ranked Universities:</strong> Home to institutions like NUS and NTU, which are consistently ranked among the best in the world.</li>
+                <li><strong>Global Business Hub:</strong> Gain exposure to a thriving economy with countless multinational corporations and startups.</li>
+                <li><strong>Safe and Efficient:</strong> Enjoy a high quality of life in one of the safest and most well-organized cities globally.</li>
+              </ul>
             </div>
-            <div class="contact-info-item">
-              <i data-lucide="message-circle"></i>
-              <div>
-                <h4>WhatsApp</h4>
-                <p>+62 812 3456 7890</p>
-              </div>
+            <div id="requirements" class="tab-pane">
+                <h2>Entry Requirements</h2>
+                <p>Admission to Singaporean universities is competitive and based on strong academic performance.</p>
+                <ul>
+                    <li><strong>Undergraduate:</strong> High school qualifications such as A-Levels, IB Diploma, or a local Polytechnic Diploma are commonly accepted.</li>
+                    <li><strong>Postgraduate:</strong> A good bachelor's degree from a reputable university is required.</li>
+                    <li><strong>English Language:</strong> An IELTS score of 6.5 - 7.0 or a TOEFL equivalent is typically necessary for admission.</li>
+                </ul>
             </div>
-            <hr />
-            <h3>Our Offices</h3>
-            <div class="office-location">
-              <h4>Jakarta, Indonesia</h4>
-              <p>
-                123 Education St, Jakarta CBD<br />Mon - Fri, 9:00 AM - 5:00 PM
-              </p>
+            <div id="costs" class="tab-pane">
+                <h2>Living & Tuition Costs</h2>
+                <p>While tuition is higher than in some Asian countries, it is competitive compared to the US and UK.</p>
+                <ul>
+                    <li><strong>Average Tuition Fees:</strong> S$17,000 - S$35,000 per year for undergraduate programs at public universities.</li>
+                    <li><strong>Estimated Living Costs:</strong> Approximately S$1,000 - S$2,000 per month, covering accommodation, food, transport, and other expenses.</li>
+                </ul>
+            </div>
+            <div id="work" class="tab-pane">
+                <h2>Work Rights for Students</h2>
+                <p>International students attending approved institutions are permitted to work up to 16 hours per week during term time and full-time during vacation periods without needing a work permit.</p>
+            </div>
+            <div id="scholarships" class="tab-pane">
+                <h2>Scholarships</h2>
+                <p>The Singaporean government and universities offer various scholarships, such as the ASEAN Undergraduate Scholarship and the Singapore International Graduate Award (SINGA), to attract top international talent.</p>
+                <a href="contact.html" class="btn btn--primary" style="margin-top: 20px;">Apply for Scholarship</a>
+            </div>
+            <div id="partners" class="tab-pane">
+                <h2>Our Partner Institutions</h2>
+                <div class="partners-grid">
+                    <div class="partner-logo"><img src="https://via.placeholder.com/150x50/cccccc/000000?text=NUS" alt="National University of Singapore"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/150x50/cccccc/000000?text=NTU" alt="Nanyang Technological University"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/150x50/cccccc/000000?text=SMU" alt="Singapore Management University"></div>
+                    <div class="partner-logo"><img src="https://via.placeholder.com/150x50/cccccc/000000?text=SUTD" alt="Singapore University of Technology and Design"></div>
+                </div>
+                <p class="partners__many">...and many more</p>
+            </div>
+            <div id="intakes" class="tab-pane">
+                <h2>Main University Intakes</h2>
+                <p>Most universities in Singapore have one main intake period per year.</p>
+                <ul>
+                    <li><strong>Main Intake:</strong> Starts in August. The application period is typically from October to March.</li>
+                    <li><strong>Minor Intake:</strong> Some universities offer a smaller intake in January for select programs.</li>
+                </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container final-cta__container">
+          <h2>Ready to Study in Singapore?</h2>
+          <p>Let our expert counsellors guide you through every step of the process.</p>
+          <a href="contact.html" class="btn btn--primary btn--large">Talk to a Counsellor for Free</a>
         </div>
       </section>
     </main>
@@ -235,6 +261,7 @@
         </div>
       </a>
     </footer>
+
     <script src="js/script.js"></script>
     <script>
       lucide.createIcons();
