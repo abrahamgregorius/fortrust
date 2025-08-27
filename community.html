@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Study in Australia - Fortrust Destinations</title>
+    <title>Our Services - Fortrust</title>
     <link
       rel="shortcut icon"
       href="./public/logo-small.png"
@@ -11,10 +11,10 @@
     />
     <meta
       name="description"
-      content="Explore entry requirements, costs, work rights, scholarships, and partner institutions for studying in Australia."
+      content="Learn about our end-to-end services, from free counselling and university application to visa assistance and pre-departure support."
     />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,8 +25,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Icons (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Stylesheet -->
@@ -42,7 +40,7 @@
           <ul class="nav__list">
             <!-- REVISI #5: Dropdown untuk Destinasi -->
             <li class="nav-item--dropdown">
-              <a href="#" class="nav__link active"
+              <a href="#" class="nav__link"
                 >Destinations
                 <i data-lucide="chevron-down" class="dropdown-icon"></i
               ></a>
@@ -60,12 +58,14 @@
             </li>
             <li class="nav-item--dropdown">
               <a href="#" class="nav__link">
-                Test-Prep
-                <i data-lucide="chevron-down" class="dropdown-icon"></i>
-              </a>
+                    Test-Prep
+                    <i data-lucide="chevron-down" class="dropdown-icon"></i>
+                </a>
               <div class="dropdown-menu">
                 <a href="tests-interest.html">Interest and Aptitude Test</a>
                 <a href="tests-language.html">Language Test Preparation</a>
+                <a href="tests-standardized.html">Standardized Test Preparation</a>
+                <a href="tests-paket.html">Paket A, B, C</a>
               </div>
             </li>
             <li class="nav-item--dropdown">
@@ -83,9 +83,7 @@
               <a href="success.html" class="nav__link">Success Stories</a>
             </li>
             <li><a href="community.html" class="nav__link">Community</a></li>
-            <li>
-              <a href="scholarship.html" class="nav__link">Scholarship</a>
-            </li>
+            <li><a href="scholarship.html" class="nav__link">Scholarship</a></li>
             <li><a href="events.html" class="nav__link">Events</a></li>
             <li><a href="about.html" class="nav__link">About</a></li>
           </ul>
@@ -104,194 +102,200 @@
     </header>
 
     <main>
+      <!-- Page Header -->
       <section class="page-header">
         <div class="container">
-          <h1>Study Abroad in Various Countries</h1>
+          <h1>Our End-to-End Services</h1>
           <p>
-            Discover a world-class education, global networks, and an unbeatable
-            lifestyle.
+            We guide you at every stage of your study abroad journey, all for
+            free.
           </p>
         </div>
       </section>
 
-      <section class="destination-details">
-        <div class="container destination-details__container">
-          <div class="tabs-nav">
-            <button class="tab-link active" data-tab="overview">
-              <i data-lucide="layout-grid"></i> Overview
-            </button>
-            <button class="tab-link" data-tab="requirements">
-              <i data-lucide="file-check-2"></i> Requirements
-            </button>
-            <button class="tab-link" data-tab="costs">
-              <i data-lucide="wallet"></i> Costs
-            </button>
-            <button class="tab-link" data-tab="work">
-              <i data-lucide="briefcase"></i> Work Rights
-            </button>
-            <button class="tab-link" data-tab="scholarships">
-              <i data-lucide="graduation-cap"></i> Scholarships
-            </button>
-            <button class="tab-link" data-tab="partners">
-              <i data-lucide="building-2"></i> Partners
-            </button>
-            <button class="tab-link" data-tab="intakes">
-              <i data-lucide="calendar-days"></i> Intakes
-            </button>
+      <!-- Process Steps Section -->
+      <section class="process-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Your Journey, Simplified</h2>
+            <p>
+              Follow our proven 6-step process for a smooth application
+              experience.
+            </p>
           </div>
-          <div class="tab-content">
-            <div id="overview" class="tab-pane active">
-              <h2>Why Study in New Zealand?</h2>
+          <div class="stepper">
+            <div class="step">
+              <div class="step-icon">1</div>
+              <h3>Free Counselling</h3>
               <p>
-                New Zealand's education system is based on the British model,
-                ensuring high-quality and globally recognized qualifications. It
-                offers a safe, friendly, and welcoming environment with a
-                balanced lifestyle, perfect for students who love nature and
-                outdoor activities while receiving a world-class, research-led
-                education.
-              </p>
-              <h3>Unique Advantages</h3>
-              <ul>
-                <li>
-                  <strong>Globally Ranked Universities:</strong> All eight of
-                  New Zealand's universities are ranked in the top 3% worldwide.
-                </li>
-                <li>
-                  <strong>Unbeatable Lifestyle:</strong> Enjoy a high quality of
-                  life with stunning natural landscapes, from mountains to
-                  beaches, all within easy reach.
-                </li>
-                <li>
-                  <strong>Post-Study Work Rights:</strong> Graduates are
-                  eligible for a post-study work visa, providing a pathway to
-                  gaining work experience and potentially residency.
-                </li>
-              </ul>
-            </div>
-            <div id="requirements" class="tab-pane">
-              <h2>Entry Requirements</h2>
-              <p>
-                Entry requirements are internationally recognized and focus on
-                academic merit and English proficiency.
-              </p>
-              <ul>
-                <li>
-                  <strong>Undergraduate:</strong> Successful completion of a
-                  qualification equivalent to New Zealand's Year 13 (e.g.,
-                  A-Levels, IB Diploma). Foundation studies are available.
-                </li>
-                <li>
-                  <strong>Postgraduate:</strong> A bachelor's degree from a
-                  recognized institution with a good GPA.
-                </li>
-                <li>
-                  <strong>English Language:</strong> An academic IELTS score of
-                  6.0 with no band below 5.5 for undergraduate, and 6.5 with no
-                  band below 6.0 for postgraduate studies.
-                </li>
-              </ul>
-            </div>
-            <div id="costs" class="tab-pane">
-              <h2>Living & Tuition Costs</h2>
-              <p>
-                The cost of studying in New Zealand is competitive with other
-                Western countries.
-              </p>
-              <ul>
-                <li>
-                  <strong>Average Tuition Fees:</strong> NZ$22,000 - NZ$32,000
-                  per year for Bachelor's degrees. Postgraduate degrees range
-                  from NZ$26,000 - NZ$37,000.
-                </li>
-                <li>
-                  <strong>Estimated Living Costs:</strong> You must prove you
-                  have at least NZ$15,000 for your first year of study to cover
-                  living expenses.
-                </li>
-              </ul>
-            </div>
-            <div id="work" class="tab-pane">
-              <h2>Work Rights for Students</h2>
-              <p>
-                Most international students can work up to 20 hours per week
-                during the academic year and full-time during scheduled
-                holidays. This is a great way to gain local experience and
-                supplement your income.
+                We discuss your goals, budget, and academic background to find
+                the best-fit country and university for you.
               </p>
             </div>
-            <div id="scholarships" class="tab-pane">
-              <h2>Scholarships</h2>
+            <div class="step">
+              <div class="step-icon">2</div>
+              <h3>Application Submission</h3>
               <p>
-                The New Zealand Government and individual universities offer a
-                range of scholarships for international students, including the
-                prestigious New Zealand Scholarships for students from
-                developing countries. Many universities also offer scholarships
-                based on academic merit.
+                We help you prepare and submit a strong application, ensuring
+                all documents are correct and complete.
               </p>
-              <a
-                href="contact.html"
-                class="btn btn--primary"
-                style="margin-top: 20px"
-                >Apply for Scholarship</a
-              >
             </div>
-            <div id="partners" class="tab-pane">
-              <h2>Our Partner Institutions</h2>
-              <div class="partners-grid">
-                <div class="partner-logo">
-                  <img
-                    src="https://via.placeholder.com/150x50/cccccc/000000?text=U+of+Auckland"
-                    alt="University of Auckland"
-                  />
-                </div>
-                <div class="partner-logo">
-                  <img
-                    src="https://via.placeholder.com/150x50/cccccc/000000?text=U+of+Otago"
-                    alt="University of Otago"
-                  />
-                </div>
-                <div class="partner-logo">
-                  <img
-                    src="https://via.placeholder.com/150x50/cccccc/000000?text=Victoria+U"
-                    alt="Victoria University of Wellington"
-                  />
-                </div>
-                <div class="partner-logo">
-                  <img
-                    src="https://via.placeholder.com/150x50/cccccc/000000?text=U+of+Canterbury"
-                    alt="University of Canterbury"
-                  />
-                </div>
+            <div class="step">
+              <div class="step-icon">3</div>
+              <h3>Offer & Visa</h3>
+              <p>
+                Once you receive an offer letter, we provide expert guidance for
+                your student visa application.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-icon">4</div>
+              <h3>Pre-Departure</h3>
+              <p>
+                We assist with accommodation, insurance, and provide a
+                pre-departure briefing to prepare you for your new life.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-icon">5</div>
+              <h3>First Day Orientation</h3>
+              <p>
+                Services to familiarize yourself with your study destination
+                including opening a bank account, getting SIM card, etc. - PAID
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-icon">6</div>
+              <h3>Study Support</h3>
+              <p>
+                When you are not sure what to do, just contact us, we will help
+                you to find a solution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="study-tour" class="extra-services-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Study Tour & Internship Programs</h2>
+          </div>
+          <div class="services-grid">
+            <div class="card service-card">
+              <div class="card__content">
+                <h3>UCCE Immersion Program</h3>
+                <p>
+                  Experience life at top universities, colleges, and companies
+                  with our University, College, Carrier Experience (UCCE)
+                  Program.
+                </p>
               </div>
-              <p class="partners__many">...and many more</p>
             </div>
-            <div id="intakes" class="tab-pane">
-              <h2>Main University Intakes</h2>
-              <p>
-                New Zealand universities primarily operate on a two-semester
-                academic year.
-              </p>
-              <ul>
-                <li>
-                  <strong>Semester 1 (Main Intake):</strong> Starts in February.
-                </li>
-                <li><strong>Semester 2:</strong> Starts in July.</li>
-              </ul>
+            <div id="internship" class="card service-card">
+              <div class="card__content">
+                <h3>Internship Programs</h3>
+                <p>
+                  Gain professional experience with our 1-month internship
+                  program in multinational companies located in Indonesia.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="final-cta">
-        <div class="container final-cta__container">
-          <h2>Ready to Study in New Zealand?</h2>
-          <p>
-            Let our expert counsellors guide you through every step of the
-            process.
-          </p>
-          <a href="contact.html" class="btn btn--primary btn--large"
-            >Talk to a Counsellor for Free</a
-          >
+      <!-- Alumni Section -->
+      <section id="alumni" class="alumni-section">
+        <div class="container alumni-section__container">
+          <div class="alumni-content">
+            <h2>Join the Fortrust Alumni Community</h2>
+            <p>
+              Connect with fellow alumni and get access to exclusive job hunting
+              services and networking opportunities.
+            </p>
+            <a href="#" class="btn btn--primary">Join WhatsApp Group</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Required Documents Section -->
+      <section class="documents-section">
+        <div class="container documents-section__container">
+          <div class="documents-info">
+            <h2>Required Documents</h2>
+            <p>
+              Having these documents ready will speed up your application
+              process.
+            </p>
+            <ul class="checklist">
+              <li><i data-lucide="check-circle"></i> Valid Passport</li>
+              <li>
+                <i data-lucide="check-circle"></i> Academic Transcripts &
+                Certificates
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i> English Proficiency Test
+                Results (IELTS/TOEFL)
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i> Statement of Purpose (SOP)
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i> Letters of Recommendation (if
+                required)
+              </li>
+            </ul>
+          </div>
+          <div class="fees-info card">
+            <h3><i data-lucide="info"></i> Our Fees</h3>
+            <p>
+              <strong
+                >Our counselling and application services are completely
+                free.</strong
+              >
+              We are funded by our partner institutions, so you get expert
+              guidance without any cost.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Section -->
+      <section class="faq-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Service FAQs</h2>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header">
+                How long does the application process take?
+                <i data-lucide="chevron-down" class="accordion-icon"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  The timeline can vary from 2 to 6 months depending on the
+                  country and university. We recommend starting at least 6-8
+                  months before your desired intake.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Can you guarantee my visa will be approved?
+                <i data-lucide="chevron-down" class="accordion-icon"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  While we have a very high success rate, the final decision
+                  rests with the immigration authorities of the respective
+                  country. We ensure your application is as strong as possible
+                  to maximize your chances.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -819,8 +819,8 @@ ul {
   gap: var(--space-4);
 }
 .footer__links ul {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-3);
 }
 .footer__contact p {
@@ -840,8 +840,11 @@ ul {
   align-items: center;
   font-size: 0.9rem;
 }
-.footer__legal a {
-  margin-left: var(--space-4);
+
+.footer__legal {
+  display: flex;
+  flex-direction: row;
+  gap: .7rem;
 }
 
 /* 10. RESPONSIVE DESIGN */
