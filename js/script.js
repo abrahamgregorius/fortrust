@@ -1,4 +1,4 @@
-/**
+ /**
  * Main script for Fortrust Website Interactivity
  *
  * This script handles:
