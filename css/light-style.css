@@ -1,11 +1,10 @@
 /* 1. SETUP & DESIGN SYSTEM */
 :root {
-  /* --- COLOR PALETTE UPDATED --- */
-  --brand-700: #10b981; /* Primary color is now Green */
-  --brand-500: #34d399; /* A lighter green for links/hovers */
-  --brand-100: #d1fae5; /* A very light green for backgrounds */
-  --accent: #0f2d5c; /* Accent color is now Navy */
-  /* --- END OF UPDATE --- */
+  /* --- PALET WARNA BARU BERDASARKAN LOGO --- */
+  --brand-700: #2a3a6a; /* Biru Navy Tua dari logo */
+  --brand-500: #4b5a8a; /* Versi lebih terang untuk hover/links */
+  --brand-100: #eef1f8; /* Versi sangat terang untuk background */
+  --accent: #b8d434; /* Hijau Limau dari logo */
 
   --warn: #f59e0b;
   --error: #dc2626;
