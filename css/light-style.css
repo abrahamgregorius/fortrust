@@ -1588,3 +1588,78 @@ ul {
     padding-bottom: 10px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --- PALET WARNA UNTUK DARK MODE (DISESUAIKAN) --- */
+    --brand-700: #b8d434; /* Hijau Limau menjadi warna utama */
+    --brand-500: #cce65b; /* Versi lebih terang untuk hover/links */
+    --brand-100: #2a331a; /* Background hijau gelap */
+    --accent: #5a6fa7; /* Biru Navy menjadi aksen */
+
+    --neutral-900: #f1f5f9; /* Teks utama menjadi putih keabuan */
+    --neutral-700: #cbd5e1; /* Teks sekunder */
+    --neutral-400: #64748b; /* Teks abu-abu gelap */
+    --neutral-100: #1a2433; /* Background abu-abu gelap */
+    --bg: #0f172a; /* Background utama menjadi biru sangat gelap */
+
+    /* Bayangan diganti dengan border tipis agar terlihat */
+    --shadow-soft: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    --shadow-medium: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  }
+
+  /* Penyesuaian spesifik untuk elemen di dark mode */
+  body,
+  .card,
+  .dropdown-menu,
+  .accordion-content {
+    background-color: var(--bg);
+    color: var(--neutral-700);
+  }
+
+  h1, h2, h3, h4,
+  .nav__link,
+  .accordion-header {
+    color: var(--neutral-900);
+  }
+
+  .header,
+  .nav.active {
+    background-color: rgba(15, 23, 42, 0.8); /* Background header lebih gelap */
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .pillars,
+  .testimonials,
+  .process-section,
+  .faq-section,
+  .extra-services-section,
+  .awards-timeline,
+  .filters {
+    background-color: #162033; /* Background section sedikit lebih terang */
+  }
+
+  .btn--secondary {
+    color: var(--brand-500);
+    border-color: var(--brand-500);
+  }
+
+  .btn--secondary:hover {
+    background-color: var(--brand-100);
+    color: var(--brand-500);
+  }
+  
+  .btn--accent {
+    color: var(--bg);
+    background-color: var(--accent);
+  }
+
+  /* Logo partner yang hitam/abu-abu dibuat lebih terang */
+  .partners__logos img {
+    filter: invert(0.85);
+  }
+  
+  .partner-logo img {
+      filter: invert(1);
+  }
+}
