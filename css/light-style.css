@@ -1677,6 +1677,7 @@ ul {
   display: block; /* Tampilkan logo versi terang secara default */
 }
 
+
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   .logo-dark {
