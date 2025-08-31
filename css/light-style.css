@@ -843,7 +843,7 @@ ul {
 .footer__legal {
   display: flex;
   flex-direction: row;
-  gap: .7rem;
+  gap: 0.7rem;
 }
 
 /* 10. RESPONSIVE DESIGN */
@@ -1437,7 +1437,7 @@ ul {
   color: var(--neutral-700);
   border-radius: 8px;
   font-weight: 500;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 .dropdown-menu a:hover {
@@ -1617,7 +1617,10 @@ ul {
     color: var(--neutral-700);
   }
 
-  h1, h2, h3, h4,
+  h1,
+  h2,
+  h3,
+  h4,
   .nav__link,
   .accordion-header {
     color: var(--neutral-900);
@@ -1648,7 +1651,7 @@ ul {
     background-color: var(--brand-100);
     color: var(--brand-500);
   }
-  
+
   .btn--accent {
     color: var(--bg);
     background-color: var(--accent);
@@ -1658,8 +1661,56 @@ ul {
   .partners__logos img {
     filter: invert(0.85);
   }
-  
+
   .partner-logo img {
-      filter: invert(1);
+    filter: invert(1);
   }
+}
+/* 22. LOGO SWAPPING FOR DARK MODE */
+/* ---------------------------------- */
+
+/* Default (Light Mode) Styles */
+.logo-dark {
+  display: none; /* Sembunyikan logo versi gelap secara default */
+}
+.logo-light {
+  display: block; /* Tampilkan logo versi terang secara default */
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .logo-dark {
+    display: block; /* Tampilkan logo versi gelap saat dark mode aktif */
+  }
+  .logo-light {
+    display: none; /* Sembunyikan logo versi terang saat dark mode aktif */
+  }
+}
+
+.policy-content {
+  padding: var(--space-16) 0;
+  max-width: 800px; /* Batasi lebar konten agar lebih mudah dibaca */
+  margin: 0 auto;
+}
+.policy-content h2 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+}
+.policy-content h3 {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+  font-size: 1.25rem;
+}
+.policy-content p,
+.policy-content li {
+  line-height: 1.8;
+  color: var(--neutral-700);
+}
+.policy-content p {
+  margin-bottom: var(--space-4); /* Tambah jarak bawah paragraf */
+}
+.policy-content ul {
+  list-style: disc;
+  padding-left: var(--space-8);
+  margin-bottom: var(--space-6); /* Tambah jarak bawah daftar */
 }

@@ -34,7 +34,18 @@
     <header class="header">
       <div class="container header__container">
         <a href="index.html" class="header__logo">
-          <img src="./public/logo-fortrust.png" height="45" alt="" />
+          <img
+            src="./public/logo-fortrust.png"
+            class="logo-light"
+            height="45"
+            alt=""
+          />
+          <img
+            src="./public/logo-white.png"
+            class="logo-dark"
+            height="45"
+            alt=""
+          />
         </a>
         <nav class="nav" id="main-nav">
           <ul class="nav__list">
@@ -46,14 +57,14 @@
               </a>
               <div class="dropdown-menu">
                 <a href="destination-australia.html">Australia</a>
+                <a href="destination-canada.html">Canada</a>
+                <a href="destination-china.html">China</a>
+                <a href="destination-malaysia.html">Malaysia</a>
                 <a href="destination-newzealand.html">New Zealand</a>
                 <a href="destination-singapore.html">Singapore</a>
-                <a href="destination-malaysia.html">Malaysia</a>
-                <a href="destination-china.html">China</a>
-                <a href="destination-usa.html">USA</a>
-                <a href="destination-canada.html">Canada</a>
                 <a href="destination-switzerland.html">Switzerland</a>
                 <a href="destination-uk.html">United Kingdom</a>
+                <a href="destination-usa.html">USA</a>
               </div>
             </li>
             <li class="nav-item--dropdown">
@@ -84,7 +95,21 @@
             <!-- <li>
               <a href="success.html" class="nav__link">Success Stories</a>
             </li> -->
-            <li><a href="community.html" class="nav__link">Community</a></li>
+            <li class="nav-item--dropdown">
+              <a href="community.html" class="nav__link"
+                >Community<i
+                  data-lucide="chevron-down"
+                  class="dropdown-icon"
+                ></i
+              ></a>
+              <div class="dropdown-menu">
+                <a href="#">Success story</a>
+                <a href="#">Work Placements</a>
+                <a href="#"
+                  >Alumni Community - Link to WA Group</a
+                >
+              </div>
+            </li>
             <!-- <li>
               <a href="scholarship.html" class="nav__link">Scholarship</a>
             </li> -->
@@ -104,60 +129,196 @@
         </div>
       </div>
     </header>
+
     <main>
-      <!-- About Story Section -->
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>30 Years of Empowering Global Citizens</h1>
+          <p>
+            Our journey began with a simple mission: to enrich students' lives
+            by helping them achieve their potential.
+          </p>
+        </div>
+      </section>
+
+      <!-- Our Story Section -->
       <section class="about-story">
         <div class="container about-story__container">
-          <div class="about-story__text">
-            <h1>30+ Years of Empowering Student Journeys</h1>
-            <p>
-              Since 1993, Fortrust has been a dedicated partner for students
-              dreaming of an international education. Our mission is to simplify
-              the complex process of studying abroad, providing expert, ethical,
-              and personalized guidance every step of the way.
-            </p>
-          </div>
           <div class="about-story__image">
             <img
-              src="https://via.placeholder.com/500x400/cccccc/000000?text=Our+Team"
-              alt="A group of Fortrust counsellors"
+              src="https://placehold.co/600x400/2a3a6a/white?text=Our+Team"
+              alt="The Fortrust team in a meeting"
             />
           </div>
+          <div class="about-story__content">
+            <h2>Our Origin & Mission</h2>
+            <p>
+              Founded in 1994 in Sydney, Australia, Fortrust was born from a
+              passion for global education. For over three decades, we have been
+              dedicated to providing innovative service solutions for students
+              and our esteemed education partners.
+            </p>
+            <p>
+              Our mission is to **inspire and enrich students' lives**, helping
+              them realize their potential while building a global network of
+              friendship and partnership. We challenge convention, stay open to
+              new ideas, and provide professional yet personal care for every
+              student's welfare.
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- Leadership Section -->
-      <section class="leadership-section">
+      <!-- Our Values Section -->
+      <section class="our-values" style="background-color: var(--neutral-100)">
         <div class="container">
           <div class="section-header">
-            <h2>Meet Our Leadership</h2>
+            <h2>The Fortrust Difference</h2>
+            <p>
+              Our team is our greatest asset. We are built on principles that
+              ensure you receive the best possible guidance.
+            </p>
           </div>
-          <div class="leadership-grid">
-            <div class="leader-card">
-              <img src="https://via.placeholder.com/200" alt="Photo of CEO" />
-              <h4>John Doe</h4>
-              <p>Founder & CEO</p>
+          <div class="pillars__container">
+            <div class="pillar">
+              <i data-lucide="heart-handshake"></i>
+              <h3>Understanding</h3>
+              <p>
+                Most of our counselors have studied abroad themselves. They
+                understand your concerns and anxieties, offering sensitive,
+                patient, and reliable guidance.
+              </p>
             </div>
-            <!-- More leader cards -->
+            <div class="pillar">
+              <i data-lucide="award"></i>
+              <h3>Expert Training</h3>
+              <p>
+                Our team undergoes comprehensive training to stay updated on the
+                latest requirements from universities, visa offices, and
+                immigration authorities.
+              </p>
+            </div>
+            <div class="pillar">
+              <i data-lucide="globe"></i>
+              <h3>Global Knowledge</h3>
+              <p>
+                With over 50 counselors fluent in multiple languages, we
+                effectively communicate and provide the right advice to match
+                your unique needs and ambitions.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Awards Timeline Section -->
+      <!-- Milestones Section -->
       <section class="awards-timeline">
         <div class="container">
           <div class="section-header">
-            <h2>Awards & Recognition</h2>
+            <h2>Our Key Milestones</h2>
+            <p>A timeline of our journey in international education.</p>
           </div>
           <div class="timeline">
+            <!-- Timeline Item -->
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <h3>Top Agent Award</h3>
-                <p>Monash University, 2023</p>
+                <h3>1994 - Founded in Sydney</h3>
+                <p>
+                  Fortrust begins its journey with a small team of three, laying
+                  the foundation for decades of student placement excellence.
+                </p>
               </div>
             </div>
-            <!-- More timeline items -->
+            <!-- Timeline Item -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>1996 - Expansion to Indonesia</h3>
+                <p>
+                  We opened our first international offices in Jakarta, Bandung,
+                  and Semarang, becoming official representatives for over 100
+                  Australian institutions.
+                </p>
+              </div>
+            </div>
+            <!-- Timeline Item -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>2006 - UCCE Program Launch</h3>
+                <p>
+                  The innovative University Course & Career Experience (UCCE)
+                  program for high school students was successfully launched.
+                </p>
+              </div>
+            </div>
+            <!-- Timeline Item -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>2014 - 20 Years of Service</h3>
+                <p>
+                  We celebrated two decades of successfully guiding students on
+                  their international education journeys.
+                </p>
+              </div>
+            </div>
+            <!-- Timeline Item -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>2022 - New Zealand & Canada Certified</h3>
+                <p>
+                  Recognized as a New Zealand Education Certified Agent and
+                  received the Maple Agent Partner Certificate from Canadian
+                  International Education.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Network Section -->
+      <section
+        class="global-network"
+        style="background-color: var(--neutral-100)"
+      >
+        <div class="container text-center">
+          <div class="section-header">
+            <h2>Our Global Network</h2>
+            <p>
+              From our headquarters in Australia, we've grown to support
+              students from all over the world.
+            </p>
+          </div>
+          <div class="pillars__container">
+            <div class="pillar">
+              <i data-lucide="map-pinned"></i>
+              <h3>13+ Office Cities</h3>
+              <p>
+                Strategically located offices across 5 countries to provide
+                localized, continuous support for our students.
+              </p>
+            </div>
+            <div class="pillar">
+              <i data-lucide="users-2"></i>
+              <h3>20,000+ Students Placed</h3>
+              <p>
+                Over two decades, we have successfully guided more than 20,000
+                students to their dream institutions.
+              </p>
+            </div>
+            <div class="pillar">
+              <i data-lucide="school"></i>
+              <h3>300+ Partner Institutions</h3>
+              <p>
+                We represent a wide range of institutions globally, from high
+                schools to world-renowned universities.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -168,7 +329,18 @@
         <div class="footer__main">
           <div class="footer__about">
             <h4>
-              <img src="./public/logo-white.png" height="50" alt="" />
+              <img
+                src="./public/logo-fortrust.png"
+                class="logo-dark"
+                height="50"
+                alt=""
+              />
+              <img
+                src="./public/logo-white.png"
+                class="logo-light"
+                height="50"
+                alt=""
+              />
             </h4>
             <p>
               Your trusted partner in international education for over 30 years.
@@ -204,24 +376,42 @@
           <div class="footer__links">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#">About Us</a></li>
+              <li><a href="about.html">About Us</a></li>
               <li><a href="#">Offices</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
           <div class="footer__links">
             <h4>Destinations</h4>
             <ul>
-              <li><a href="#">Australia</a></li>
-              <li><a href="#">Canada</a></li>
-              <li><a href="#">China</a></li>
-              <li><a href="#">Malaysia</a></li>
-              <li><a href="#">New Zealand</a></li>
-              <li><a href="#">Singapore</a></li>
-              <li><a href="#">UK</a></li>
-              <li><a href="#">Switzerland</a></li>
-              <li><a href="#">USA</a></li>
+              <li>
+                <a href="destination-australia.html">Australia</a>
+              </li>
+              <li>
+                <a href="destination-canada.html">Canada</a>
+              </li>
+              <li>
+                <a href="destination-china.html">China</a>
+              </li>
+              <li>
+                <a href="destination-malaysia.html">Malaysia</a>
+              </li>
+              <li>
+                <a href="destination-newzealand.html">New Zealand</a>
+              </li>
+              <li>
+                <a href="destination-singapore.html">Singapore</a>
+              </li>
+              <li>
+                <a href="destination-switzerland.html">Switzerland</a>
+              </li>
+              <li>
+                <a href="destination-uk.html">United Kingdom</a>
+              </li>
+              <li>
+                <a href="destination-usa.html">USA</a>
+              </li>
             </ul>
           </div>
           <div class="footer__contact">
@@ -250,9 +440,9 @@
             reserved.
           </p>
           <div class="footer__legal">
-            <a href="#">Privacy Policy</a>
+            <a href="policy-privacy.html">Privacy Policy</a>
             <span>|</span>
-            <a href="#">Cookie Policy</a>
+            <a href="policy-cookie.html">Cookie Policy</a>
           </div>
         </div>
       </div>
