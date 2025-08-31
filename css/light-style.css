@@ -1677,7 +1677,6 @@ ul {
   display: block; /* Tampilkan logo versi terang secara default */
 }
 
-
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   .logo-dark {
@@ -1714,4 +1713,19 @@ ul {
   list-style: disc;
   padding-left: var(--space-8);
   margin-bottom: var(--space-6); /* Tambah jarak bawah daftar */
+}
+
+/* 23. HAMBURGER ICON THEME */
+/* ------------------------- */
+
+/* Warna default untuk Light Mode */
+.hamburger svg {
+  stroke: var(--neutral-900); /* Warna stroke gelap */
+}
+
+/* Dark Mode color for the SVG's stroke */
+@media (prefers-color-scheme: dark) {
+  .hamburger svg {
+    stroke: var(--neutral-900); /* Warna stroke terang */
+  }
 }
