@@ -125,15 +125,14 @@ ul {
   color: var(--brand-700);
 }
 .btn--accent {
-  color: var(--brand-700);
-  background-color: var(--accent);
+    background-color: var(--accent);
+    color: var(--brand-700);
 }
 .btn--accent:hover {
-  color: var(--accent);
-  background-color: transparent;
-  border-color: var(--accent);
+    background-color: var(--brand-700);
+    color: var(--bg);
+    border-color: var(--accent);
 }
-
 .btn--large {
   padding: var(--space-4) var(--space-8);
   font-size: 1.1rem;
@@ -572,13 +571,48 @@ ul {
   display: block;
   animation: fadeIn 0.5s;
 }
-.tab-pane h2 {
-  margin-bottom: var(--space-6);
+
+/* REUSABLE CONTENT BLOCKS & TABLES */
+.content-block {
+    margin-bottom: var(--space-12);
 }
-.tab-pane ul {
-  list-style: disc;
-  padding-left: var(--space-6);
+.content-block h2, .content-block h3 {
+    margin-bottom: var(--space-4);
 }
+.content-block p, .content-block ul {
+    max-width: 80ch; /* Optimal line length for readability */
+}
+.content-block ul {
+    list-style: disc;
+    padding-left: var(--space-6);
+}
+.content-block li {
+    margin-bottom: var(--space-3);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-6);
+}
+.data-table th, .data-table td {
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    border-bottom: 1px solid var(--neutral-100);
+}
+.data-table th {
+    background-color: var(--neutral-100);
+    font-weight: 600;
+    color: var(--brand-700);
+}
+.data-table tbody tr:hover {
+    background-color: var(--brand-100);
+}
+
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -843,7 +877,7 @@ ul {
 .footer__legal {
   display: flex;
   flex-direction: row;
-  gap: 0.7rem;
+  gap: .7rem;
 }
 
 /* 10. RESPONSIVE DESIGN */
@@ -1437,7 +1471,7 @@ ul {
   color: var(--neutral-700);
   border-radius: 8px;
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin-bottom: .4rem;
 }
 
 .dropdown-menu a:hover {
@@ -1453,20 +1487,15 @@ ul {
   color: var(--neutral-400);
 }
 
-/* Penyesuaian untuk dropdown di mobile */
-@media (max-width: 1024px) {
-  .nav-item--dropdown:hover .dropdown-menu,
-  .nav-item--dropdown .dropdown-icon {
-    display: none; /* Sembunyikan dropdown di mode hamburger */
-  }
-}
-
 /* 18. MOBILE NAVIGATION DROPDOWN */
 /* ------------------------- */
 
 @media (max-width: 1024px) {
   /* Hapus aturan yang menyembunyikan dropdown di mobile */
-  .nav-item--dropdown:hover .dropdown-menu,
+  .nav-item--dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
   .nav-item--dropdown .dropdown-icon {
     display: inline-block; /* Pastikan ikon tetap terlihat */
   }
@@ -1481,7 +1510,6 @@ ul {
 
   /* Sembunyikan dropdown desktop di mobile */
   .nav-item--dropdown .dropdown-menu {
-    display: block; /* Ganti dari none ke block */
     position: static; /* Hapus posisi absolut */
     opacity: 1;
     transform: none;
@@ -1493,7 +1521,7 @@ ul {
     /* Sembunyikan dengan max-height untuk transisi */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out, margin-top 0.4s ease-in-out, padding-bottom 0.4s ease-in-out;
   }
 
   /* Styling untuk item di dalam mobile dropdown */
@@ -1508,7 +1536,8 @@ ul {
   /* Tampilkan dropdown saat parent-nya aktif */
   .nav-item--dropdown.active .dropdown-menu {
     max-height: 500px; /* Atur tinggi maksimal yang cukup */
-    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
   }
 
   /* Putar ikon panah saat aktif */
@@ -1572,100 +1601,46 @@ ul {
   /* FIX 1: Mengatur agar link tidak full-width, sehingga garis bawahnya pas */
   .nav__list .nav__link {
     display: inline-block; /* Membuat lebar link sesuai kontennya */
+    width: auto; /* Reset width */
     padding-left: var(--space-4);
     padding-right: var(--space-4);
   }
 
-  /* FIX 2: Memperbaiki transisi dropdown agar tidak merusak layout */
+  /* FIX 2: Menghapus transisi yang tidak perlu dari .dropdown-menu */
   .nav-item--dropdown .dropdown-menu {
-    padding: 0; /* Hapus padding awal */
-    margin-top: 0;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .nav-item--dropdown.active .dropdown-menu {
-    margin-top: 10px; /* Beri jarak hanya saat dropdown aktif */
-    padding-bottom: 10px;
+     transition: max-height 0.4s ease-in-out, margin-top 0.4s ease-in-out, padding-bottom 0.4s ease-in-out;
   }
 }
 
+
+/* 21. DARK MODE */
+/* ------------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --- PALET WARNA UNTUK DARK MODE (DISESUAIKAN) --- */
-    --brand-700: #b8d434; /* Hijau Limau menjadi warna utama */
-    --brand-500: #cce65b; /* Versi lebih terang untuk hover/links */
-    --brand-100: #2a331a; /* Background hijau gelap */
-    --accent: #5a6fa7; /* Biru Navy menjadi aksen */
-
-    --neutral-900: #f1f5f9; /* Teks utama menjadi putih keabuan */
-    --neutral-700: #cbd5e1; /* Teks sekunder */
-    --neutral-400: #64748b; /* Teks abu-abu gelap */
-    --neutral-100: #1a2433; /* Background abu-abu gelap */
-    --bg: #0f172a; /* Background utama menjadi biru sangat gelap */
-
-    /* Bayangan diganti dengan border tipis agar terlihat */
-    --shadow-soft: 0 0 0 1px rgba(255, 255, 255, 0.1);
-    --shadow-medium: 0 0 0 1px rgba(255, 255, 255, 0.15);
+    /* --- PALET WARNA BARU UNTUK DARK MODE --- */
+    --brand-700: #b8d434; /* Primary (Hijau Limau) */
+    --brand-500: #c9e25d; /* Lighter Green */
+    --brand-100: #3a4a1a; /* Darker Green for backgrounds */
+    --accent: #4b5a8a; /* Accent (Light Navy) */
+    
+    --neutral-900: #f1f5f9;
+    --neutral-700: #cbd5e1;
+    --neutral-400: #64748b;
+    --neutral-100: #1e293b;
+    --bg: #0f172a; /* Dark background */
   }
 
-  /* Penyesuaian spesifik untuk elemen di dark mode */
-  body,
-  .card,
-  .dropdown-menu,
-  .accordion-content {
-    background-color: var(--bg);
-    color: var(--neutral-700);
+  .header {
+    background-color: rgba(15, 23, 42, 0.8);
+    border-bottom-color: var(--neutral-100);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  .nav__link,
-  .accordion-header {
-    color: var(--neutral-900);
-  }
-
-  .header,
-  .nav.active {
-    background-color: rgba(15, 23, 42, 0.8); /* Background header lebih gelap */
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .pillars,
-  .testimonials,
-  .process-section,
-  .faq-section,
-  .extra-services-section,
-  .awards-timeline,
-  .filters {
-    background-color: #162033; /* Background section sedikit lebih terang */
-  }
-
-  .btn--secondary {
-    color: var(--brand-500);
-    border-color: var(--brand-500);
-  }
-
-  .btn--secondary:hover {
-    background-color: var(--brand-100);
-    color: var(--brand-500);
-  }
-
-  .btn--accent {
-    color: var(--bg);
-    background-color: var(--accent);
-  }
-
-  /* Logo partner yang hitam/abu-abu dibuat lebih terang */
-  .partners__logos img {
-    filter: invert(0.85);
-  }
-
-  .partner-logo img {
-    filter: invert(1);
+  .card, .partner-logo {
+      border: 1px solid var(--neutral-100);
   }
 }
+
+
 /* 22. LOGO SWAPPING FOR DARK MODE */
 /* ---------------------------------- */
 
@@ -1687,38 +1662,10 @@ ul {
   }
 }
 
-.policy-content {
-  padding: var(--space-16) 0;
-  max-width: 800px; /* Batasi lebar konten agar lebih mudah dibaca */
-  margin: 0 auto;
-}
-.policy-content h2 {
-  margin-top: var(--space-8);
-  margin-bottom: var(--space-4);
-}
-.policy-content h3 {
-  margin-top: var(--space-6);
-  margin-bottom: var(--space-3);
-  font-size: 1.25rem;
-}
-.policy-content p,
-.policy-content li {
-  line-height: 1.8;
-  color: var(--neutral-700);
-}
-.policy-content p {
-  margin-bottom: var(--space-4); /* Tambah jarak bawah paragraf */
-}
-.policy-content ul {
-  list-style: disc;
-  padding-left: var(--space-8);
-  margin-bottom: var(--space-6); /* Tambah jarak bawah daftar */
-}
+/* 23. HAMBURGER ICON THEME (FIXED) */
+/* ---------------------------------- */
 
-/* 23. HAMBURGER ICON THEME */
-/* ------------------------- */
-
-/* Warna default untuk Light Mode */
+/* Default (Light Mode) color for the SVG's stroke */
 .hamburger svg {
   stroke: var(--neutral-900); /* Warna stroke gelap */
 }
@@ -1726,6 +1673,109 @@ ul {
 /* Dark Mode color for the SVG's stroke */
 @media (prefers-color-scheme: dark) {
   .hamburger svg {
-    stroke: var(--neutral-900); /* Warna stroke terang */
+    stroke: var(--neutral-100); /* Warna stroke terang */
   }
+}
+
+/* Policy Page Specific Styles */
+.policy-container {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.policy-container h1 {
+    margin-bottom: var(--space-8);
+}
+.policy-container h2 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+}
+.policy-container p, .policy-container li {
+    margin-bottom: var(--space-4);
+}
+.policy-container ul {
+    list-style: disc;
+    padding-left: var(--space-6);
+}
+
+.community-section {
+  padding: var(--space-16) 0;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.community-card {
+  text-align: center;
+}
+
+.community-card .icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-6);
+  background-color: var(--brand-100);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--brand-700);
+}
+
+.community-card h3 {
+  margin-bottom: var(--space-4);
+}
+
+.community-cta {
+  background-color: var(--neutral-100);
+}
+
+.community-cta__container {
+  text-align: center;
+  max-width: 700px;
+}
+
+.internship-spotlight {
+  background-color: var(--brand-100);
+}
+
+.internship-spotlight__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.internship-spotlight__image img {
+  width: 100%;
+  border-radius: var(--radius-card);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+}
+
+.pricing-table {
+  width: 100%;
+  min-width: 600px; /* ensure table is scrollable on small screens */
+  border-collapse: collapse;
+  margin-top: var(--space-8);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: var(--space-4);
+  border: 1px solid var(--neutral-100);
+  text-align: left;
+}
+
+.pricing-table thead {
+  background-color: var(--brand-700);
+  color: var(--bg);
 }
