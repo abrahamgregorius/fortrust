@@ -573,6 +573,13 @@ ul {
 }
 
 /* REUSABLE CONTENT BLOCKS & TABLES */
+.content__banner {
+  width: 800px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: var(--space-4);
+}
+
 .content-block {
     margin-bottom: var(--space-12);
 }
