@@ -546,6 +546,7 @@ ul {
   padding: var(--space-3) var(--space-4);
   border-radius: 12px;
   font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
   color: var(--neutral-700);
   cursor: pointer;
   transition: all 0.3s ease;
