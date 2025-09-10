@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Services - Fortrust</title>
+    <title>Find Your Program - Fortrust</title>
     <link
       rel="shortcut icon"
       href="./public/logo-small.png"
@@ -11,7 +11,7 @@
     />
     <meta
       name="description"
-      content="Learn about our end-to-end services, from free counselling and university application to visa assistance and pre-departure support."
+      content="Search and filter thousands of undergraduate and postgraduate programs from top universities worldwide."
     />
 
     <!-- Google Fonts & Icons -->
@@ -34,8 +34,18 @@
     <header class="header">
       <div class="container header__container">
         <a href="index.html" class="header__logo">
-          <img src="./public/logo-fortrust.png" class="logo-light" height="45" alt="" />
-              <img src="./public/logo-white.png" class="logo-dark" height="45" alt="" />
+          <img
+            src="./public/logo-fortrust.png"
+            class="logo-light"
+            height="45"
+            alt=""
+          />
+          <img
+            src="./public/logo-white.png"
+            class="logo-dark"
+            height="45"
+            alt=""
+          />
         </a>
         <nav class="nav" id="main-nav">
           <ul class="nav__list">
@@ -58,7 +68,7 @@
               </div>
             </li>
             <li class="nav-item--dropdown">
-              <a href="#" class="nav__link">
+              <a href="programs.html" class="nav__link active">
                 Test-Prep
                 <i data-lucide="chevron-down" class="dropdown-icon"></i>
               </a>
@@ -78,8 +88,8 @@
               ></a>
               <div class="dropdown-menu">
                 <a href="services-university.html">University Placement</a>
-                <a href="services-studytour.html">UCCE: Study Tour</a>
-                <a href="services-internship.html">UCCE: Internship Program</a>
+                <a href="services-studytour.html">Study Tour</a>
+                <a href="services-internship.html">Internship Program</a>
               </div>
             </li>
             <!-- <li>
@@ -124,158 +134,73 @@
       <!-- Page Header -->
       <section class="page-header">
         <div class="container">
-          <h1>Our End-to-End Services</h1>
+          <h1>Find Your Perfect Program</h1>
           <p>
-            We guide you at every stage of your study abroad journey, all for
-            free.
+            Use the filters below to discover courses that match your goals.
           </p>
         </div>
       </section>
 
-      <!-- Process Steps Section -->
-      <section class="process-section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Your Journey, Simplified</h2>
-            <p>
-              Follow our proven 6-step process for a smooth application
-              experience.
-            </p>
-          </div>
-          <div class="stepper">
-            <div class="step">
-              <div class="step-icon">1</div>
-              <h3>Free Counselling</h3>
-              <p>
-                We discuss your goals, budget, and academic background to find
-                the best-fit country and university for you.
-              </p>
+      <!-- Filters & Results Section -->
+      <section class="programs-section">
+        <div class="container programs-section__container">
+          <!-- Filters -->
+          <aside class="filters">
+            <h3><i data-lucide="filter"></i> Filter Programs</h3>
+            <div class="filter-group">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="all">All Countries</option>
+                <option value="australia">Australia</option>
+                <option value="uk">United Kingdom</option>
+                <option value="nz">New Zealand</option>
+              </select>
             </div>
-            <div class="step">
-              <div class="step-icon">2</div>
-              <h3>Application Submission</h3>
-              <p>
-                We help you prepare and submit a strong application, ensuring
-                all documents are correct and complete.
-              </p>
+            <div class="filter-group">
+              <label for="level">Degree Level</label>
+              <select id="level" name="level">
+                <option value="all">All Levels</option>
+                <option value="bachelor">Bachelor's</option>
+                <option value="master">Master's</option>
+                <option value="phd">PhD</option>
+              </select>
             </div>
-            <div class="step">
-              <div class="step-icon">3</div>
-              <h3>Offer & Visa</h3>
-              <p>
-                Once you receive an offer letter, we provide expert guidance for
-                your student visa application.
-              </p>
+            <div class="filter-group">
+              <label for="discipline">Discipline</label>
+              <input
+                type="text"
+                id="discipline"
+                placeholder="e.g., Business, Engineering"
+              />
             </div>
-            <div class="step">
-              <div class="step-icon">4</div>
-              <h3>Pre-Departure</h3>
-              <p>
-                We assist with accommodation, insurance, and provide a
-                pre-departure briefing to prepare you for your new life.
-              </p>
-            </div>
-            <div class="step">
-              <div class="step-icon">5</div>
-              <h3>First Day Orientation</h3>
-              <p>
-                Services to familiarize yourself with your study destination
-                including opening a bank account, getting SIM card, etc. - PAID
-              </p>
-            </div>
-            <div class="step">
-              <div class="step-icon">6</div>
-              <h3>Study Support</h3>
-              <p>
-                When you are not sure what to do, just contact us, we will help
-                you to find a solution.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <button class="btn btn--primary" style="width: 100%">
+              Apply Filters
+            </button>
+          </aside>
 
-      <section id="study-tour" class="extra-services-section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Study Tour & Internship Programs</h2>
-          </div>
-          <div class="services-grid">
-            <div class="card service-card">
-              <div class="card__content">
-                <h3>UCCE Immersion Program</h3>
-                <p>
-                  Experience life at top universities, colleges, and companies
-                  with our University, College, Carrier Experience (UCCE)
-                  Program.
-                </p>
+          <!-- Results -->
+          <div class="results">
+            <div class="card program-card">
+              <h4>Master of Business Administration (MBA)</h4>
+              <p class="university">University of Sydney, Australia</p>
+              <div class="program-details">
+                <span><i data-lucide="calendar"></i> 2 years</span>
+                <span><i data-lucide="wallet"></i> A$50,000/year</span>
+                <span><i data-lucide="map-pin"></i> Sydney</span>
               </div>
+              <a href="#" class="btn btn--secondary">View Details</a>
             </div>
-            <div id="internship" class="card service-card">
-              <div class="card__content">
-                <h3>Internship Programs</h3>
-                <p>
-                  Gain professional experience with our 1-month internship
-                  program in multinational companies located in Indonesia.
-                </p>
+            <div class="card program-card">
+              <h4>Bachelor of Computer Science</h4>
+              <p class="university">University College London, UK</p>
+              <div class="program-details">
+                <span><i data-lucide="calendar"></i> 3 years</span>
+                <span><i data-lucide="wallet"></i> £28,000/year</span>
+                <span><i data-lucide="map-pin"></i> London</span>
               </div>
+              <a href="#" class="btn btn--secondary">View Details</a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Alumni Section -->
-      <section id="alumni" class="alumni-section">
-        <div class="container alumni-section__container">
-          <div class="alumni-content">
-            <h2>Join the Fortrust Alumni Community</h2>
-            <p>
-              Connect with fellow alumni and get access to exclusive job hunting
-              services and networking opportunities.
-            </p>
-            <a href="#" class="btn btn--primary">Join WhatsApp Group</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Required Documents Section -->
-      <section class="documents-section">
-        <div class="container documents-section__container">
-          <div class="documents-info">
-            <h2>Required Documents</h2>
-            <p>
-              Having these documents ready will speed up your application
-              process.
-            </p>
-            <ul class="checklist">
-              <li><i data-lucide="check-circle"></i> Valid Passport</li>
-              <li>
-                <i data-lucide="check-circle"></i> Academic Transcripts &
-                Certificates
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i> English Proficiency Test
-                Results (IELTS/TOEFL)
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i> Statement of Purpose (SOP)
-              </li>
-              <li>
-                <i data-lucide="check-circle"></i> Letters of Recommendation (if
-                required)
-              </li>
-            </ul>
-          </div>
-          <div class="fees-info card">
-            <h3><i data-lucide="info"></i> Our Fees</h3>
-            <p>
-              <strong
-                >Our counselling and application services are completely
-                free.</strong
-              >
-              We are funded by our partner institutions, so you get expert
-              guidance without any cost.
-            </p>
+            <!-- More results here -->
           </div>
         </div>
       </section>
@@ -284,33 +209,33 @@
       <section class="faq-section">
         <div class="container">
           <div class="section-header">
-            <h2>Service FAQs</h2>
+            <h2>Frequently Asked Questions</h2>
           </div>
           <div class="accordion">
             <div class="accordion-item">
               <button class="accordion-header">
-                How long does the application process take?
+                What is the difference between a Bachelor's and a Master's
+                degree?
                 <i data-lucide="chevron-down" class="accordion-icon"></i>
               </button>
               <div class="accordion-content">
                 <p>
-                  The timeline can vary from 2 to 6 months depending on the
-                  country and university. We recommend starting at least 6-8
-                  months before your desired intake.
+                  A Bachelor's degree is an undergraduate program, while a
+                  Master's is a postgraduate program that requires a completed
+                  Bachelor's degree for entry.
                 </p>
               </div>
             </div>
             <div class="accordion-item">
               <button class="accordion-header">
-                Can you guarantee my visa will be approved?
+                How do I know if I am eligible for a program?
                 <i data-lucide="chevron-down" class="accordion-icon"></i>
               </button>
               <div class="accordion-content">
                 <p>
-                  While we have a very high success rate, the final decision
-                  rests with the immigration authorities of the respective
-                  country. We ensure your application is as strong as possible
-                  to maximize your chances.
+                  Each program has specific academic and English language
+                  requirements. Our counsellors can assess your qualifications
+                  and help you find suitable options.
                 </p>
               </div>
             </div>
