@@ -188,7 +188,7 @@ ul {
 /* Desktop navigation is now the default */
 .nav__list {
   display: flex;
-  gap: var(--space-8);
+  gap: var(--space-6);
 }
 .nav__link {
   font-size: 0.95rem;
