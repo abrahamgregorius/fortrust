@@ -126,13 +126,13 @@ ul {
   color: var(--brand-700);
 }
 .btn--accent {
-    background-color: var(--accent);
-    color: var(--brand-700);
+  background-color: var(--accent);
+  color: var(--brand-700);
 }
 .btn--accent:hover {
-    background-color: var(--brand-700);
-    color: var(--bg);
-    border-color: var(--accent);
+  background-color: var(--brand-700);
+  color: var(--bg);
+  border-color: var(--accent);
 }
 .btn--large {
   padding: var(--space-4) var(--space-8);
@@ -368,18 +368,29 @@ ul {
   position: relative;
 }
 .slider__wrapper {
-  display: flex;
+  display: grid;
   overflow: hidden;
 }
 .testimonial-card {
-  flex: 0 0 100%;
-  background-color: var(--bg);
-  padding: var(--space-8);
-  border-radius: var(--radius-card);
-  display: none;
+  grid-area: 1 / 1;
+  width: 100%;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ini kuncinya! */
+  min-height: 300px; /* Anda bisa sesuaikan nilainya */
 }
+
+.testimonial-card:hover {
+  transform: translateY(0);
+}
+
 .testimonial-card.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .testimonial-card__content {
   font-size: 1.2rem;
@@ -395,6 +406,8 @@ ul {
 .testimonial-card__author img {
   width: 50px;
   height: 50px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
 }
 .author-info strong {
@@ -547,7 +560,7 @@ ul {
   padding: var(--space-3) var(--space-4);
   border-radius: 12px;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--neutral-700);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -585,43 +598,46 @@ ul {
 }
 
 .content-block {
-    margin-bottom: var(--space-12);
+  margin-bottom: var(--space-12);
 }
-.content-block h2, .content-block h3 {
-    margin-bottom: var(--space-4);
+.content-block h2,
+.content-block h3 {
+  margin-bottom: var(--space-4);
 }
-.content-block p, .content-block ul {
-    max-width: 80ch; /* Optimal line length for readability */
+.content-block p,
+.content-block ul {
+  max-width: 80ch; /* Optimal line length for readability */
 }
 .content-block ul {
-    list-style: disc;
-    padding-left: var(--space-6);
+  list-style: disc;
+  padding-left: var(--space-6);
 }
 .content-block li {
-    margin-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
 }
 
 .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: var(--space-6);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-6);
 }
-.data-table th, .data-table td {
-    padding: var(--space-3) var(--space-4);
-    text-align: left;
-    border-bottom: 1px solid var(--neutral-100);
+.data-table th,
+.data-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--neutral-100);
 }
 .data-table th {
-    background-color: var(--neutral-100);
-    font-weight: 600;
-    color: var(--brand-700);
+  background-color: var(--neutral-100);
+  font-weight: 600;
+  color: var(--brand-700);
 }
 .data-table tbody tr:hover {
-    background-color: var(--brand-100);
+  background-color: var(--brand-100);
 }
 
 .partners-grid {
@@ -888,7 +904,7 @@ ul {
 .footer__legal {
   display: flex;
   flex-direction: row;
-  gap: .7rem;
+  gap: 0.7rem;
 }
 
 /* 10. RESPONSIVE DESIGN */
@@ -1483,7 +1499,7 @@ ul {
   color: var(--neutral-700);
   border-radius: 8px;
   font-weight: 500;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 .dropdown-menu a:hover {
@@ -1533,7 +1549,8 @@ ul {
     /* Sembunyikan dengan max-height untuk transisi */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out, margin-top 0.4s ease-in-out, padding-bottom 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out, margin-top 0.4s ease-in-out,
+      padding-bottom 0.4s ease-in-out;
   }
 
   /* Styling untuk item di dalam mobile dropdown */
@@ -1620,10 +1637,10 @@ ul {
 
   /* FIX 2: Menghapus transisi yang tidak perlu dari .dropdown-menu */
   .nav-item--dropdown .dropdown-menu {
-     transition: max-height 0.4s ease-in-out, margin-top 0.4s ease-in-out, padding-bottom 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out, margin-top 0.4s ease-in-out,
+      padding-bottom 0.4s ease-in-out;
   }
 }
-
 
 /* 21. DARK MODE */
 /* ------------------------- */
@@ -1634,7 +1651,7 @@ ul {
     --brand-500: #c9e25d; /* Lighter Green */
     --brand-100: #3a4a1a; /* Darker Green for backgrounds */
     --accent: #4b5a8a; /* Accent (Light Navy) */
-    
+
     --neutral-900: #f1f5f9;
     --neutral-700: #cbd5e1;
     --neutral-400: #64748b;
@@ -1647,11 +1664,11 @@ ul {
     border-bottom-color: var(--neutral-100);
   }
 
-  .card, .partner-logo {
-      border: 1px solid var(--neutral-100);
+  .card,
+  .partner-logo {
+    border: 1px solid var(--neutral-100);
   }
 }
-
 
 /* 22. LOGO SWAPPING FOR DARK MODE */
 /* ---------------------------------- */
@@ -1691,24 +1708,25 @@ ul {
 
 /* Policy Page Specific Styles */
 .policy-container {
-    padding-top: var(--space-12);
-    padding-bottom: var(--space-16);
-    max-width: 800px;
-    margin: 0 auto;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-16);
+  max-width: 800px;
+  margin: 0 auto;
 }
 .policy-container h1 {
-    margin-bottom: var(--space-8);
+  margin-bottom: var(--space-8);
 }
 .policy-container h2 {
-    margin-top: var(--space-8);
-    margin-bottom: var(--space-4);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
 }
-.policy-container p, .policy-container li {
-    margin-bottom: var(--space-4);
+.policy-container p,
+.policy-container li {
+  margin-bottom: var(--space-4);
 }
 .policy-container ul {
-    list-style: disc;
-    padding-left: var(--space-6);
+  list-style: disc;
+  padding-left: var(--space-6);
 }
 
 .community-section {
@@ -1790,4 +1808,13 @@ ul {
 .pricing-table thead {
   background-color: var(--brand-700);
   color: var(--bg);
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem; /* Kurangi padding di mobile */
+  }
+  .testimonial-card__content {
+    font-size: 1rem; /* Kecilkan font di mobile */
+  }
 }

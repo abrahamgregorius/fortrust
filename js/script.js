@@ -1,4 +1,4 @@
- /**
+/**
  * Main script for Fortrust Website Interactivity
  *
  * This script handles:
@@ -61,33 +61,35 @@ document.addEventListener("DOMContentLoaded", function () {
     elements.hamburgerBtn.addEventListener("click", () => {
       const isActive = elements.navMenu.classList.toggle("active");
       const menuIcon = elements.hamburgerBtn.querySelector("i");
-      
+
       menuIcon.setAttribute("data-lucide", isActive ? "x" : "menu");
       lucide.createIcons();
 
       // Close all dropdowns if the main menu is closed
       if (!isActive) {
-        elements.dropdownItems.forEach(item => item.classList.remove("active"));
+        elements.dropdownItems.forEach((item) =>
+          item.classList.remove("active")
+        );
       }
     });
 
     // Mobile dropdown toggle logic for each dropdown item
-    elements.dropdownItems.forEach(item => {
-      const link = item.querySelector('.nav__link');
-      link.addEventListener('click', function(e) {
+    elements.dropdownItems.forEach((item) => {
+      const link = item.querySelector(".nav__link");
+      link.addEventListener("click", function (e) {
         // Only activate click behavior on mobile
         if (window.innerWidth <= 1024) {
           e.preventDefault(); // Prevent page navigation on tap
-          
+
           // Close other open dropdowns before opening the new one
-          elements.dropdownItems.forEach(otherItem => {
+          elements.dropdownItems.forEach((otherItem) => {
             if (otherItem !== item) {
-              otherItem.classList.remove('active');
+              otherItem.classList.remove("active");
             }
           });
 
           // Toggle the current dropdown
-          item.classList.toggle('active');
+          item.classList.toggle("active");
         }
       });
     });
@@ -124,14 +126,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let slideInterval;
 
     const goToSlide = (slideIndex) => {
-      slides.forEach((slide, index) => slide.classList.toggle("active", index === slideIndex));
-      dots.forEach((dot, index) => dot.classList.toggle("active", index === slideIndex));
+      slides.forEach((slide, index) =>
+        slide.classList.toggle("active", index === slideIndex)
+      );
+      dots.forEach((dot, index) =>
+        dot.classList.toggle("active", index === slideIndex)
+      );
       currentSlide = slideIndex;
     };
 
     const nextSlide = () => goToSlide((currentSlide + 1) % slides.length);
-    const prevSlide = () => goToSlide((currentSlide - 1 + slides.length) % slides.length);
-    
+    const prevSlide = () =>
+      goToSlide((currentSlide - 1 + slides.length) % slides.length);
+
     const startSlideShow = () => {
       clearInterval(slideInterval); // Clear previous interval
       slideInterval = setInterval(nextSlide, 7000);
@@ -162,9 +169,33 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!elements.testimonialSliderWrapper) return;
 
     const testimonials = [
-      { quote: "Fortrust made my dream of studying in the UK a reality...", author: "Anya Lestari", role: "UCL Alumni, UK (2024)", img: "https://via.placeholder.com/50" },
-      { quote: "The guidance for my visa application was crystal clear...", author: "Budi Santoso", role: "Monash University Student, Australia (2025)", img: "https://via.placeholder.com/50" },
-      { quote: "As parents, we needed reassurance about the process and safety...", author: "Mr. & Mrs. Wijaya", role: "Parents of a UNSW Student, Australia (2024)", img: "https://via.placeholder.com/50" },
+      {
+        quote:
+          "All good with Fortrust, I got advice and suggestions that I needed during application to NZ universities. Fortrust staff, mbak Sarah also have assisted me throughout my application journey to several universities until I decided AIS is the most suitable for me. I'm thankful to be given the opportunity to live my NZ dreams with my family. Thank you, Fortrust!",
+        author: "Oltariani Laswinta Fitri",
+        role: "Auckland Institute of Studies - Master of Business",
+        img: "./public/people/Oltariani-Laswinta-Fitri.jpg",
+      },
+      {
+        quote: "Amazing place to study",
+        author: "Joshua Moshe Djuandi",
+        role: "Teesside University - Artificial Intelligence",
+        img: "./public/people/Joshua-Moshe-Djuandi.jpg",
+      },
+      {
+        quote:
+          "Fortrust provided excellent support throughout my University of Melbourne application process. Their queick responses and insightfuil guidance made the entire experience smooth and stress-free. They were always available to answer questions, offering personalized advice and ensuring I understood each step. Highly recommend their efficient and professional service!",
+        author: "Listiawati",
+        role: "University of Melbourne - Bachelor of Commerce",
+        img: "./public/people/Listiawati.jpg",
+      },
+      {
+        quote:
+          "Sangat membantu dalam memilih jurusan dan sekolah yang cocok berdasarkan dengan jurusannya. Counsellor juga sangat membantu sepanjang proses registrasi ke sekolah tersebut juga memberikan informasi yang detail.",
+        author: "Charlotte Erika Javly",
+        role: "Amity Global Institute - Finance and Accounting",
+        img: "./public/people/Charlotte-Erika-Javly.jpg",
+      },
     ];
     let currentTestimonial = 0;
 
@@ -172,7 +203,9 @@ document.addEventListener("DOMContentLoaded", function () {
       elements.testimonialSliderWrapper.innerHTML = "";
       testimonials.forEach((testimonial, index) => {
         const card = document.createElement("div");
-        card.className = `card testimonial-card ${index === currentTestimonial ? "active" : ""}`;
+        card.className = `card testimonial-card ${
+          index === currentTestimonial ? "active" : ""
+        }`;
         card.innerHTML = `
           <p class="testimonial-card__content">"${testimonial.quote}"</p>
           <div class="testimonial-card__author">
@@ -184,8 +217,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function show(index) {
-      const slides = elements.testimonialSliderWrapper.querySelectorAll(".testimonial-card");
-      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      const slides =
+        elements.testimonialSliderWrapper.querySelectorAll(".testimonial-card");
+      slides.forEach((slide, i) =>
+        slide.classList.toggle("active", i === index)
+      );
     }
 
     const nextBtn = document.querySelector(".slider__btn--next");
@@ -197,9 +233,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     prevBtn.addEventListener("click", () => {
-      currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+      currentTestimonial =
+        (currentTestimonial - 1 + testimonials.length) % testimonials.length;
       show(currentTestimonial);
     });
+
+    setInterval(() => {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      show(currentTestimonial);
+    }, 5000);
 
     render();
   }
@@ -218,11 +260,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!clickedTab) return;
       e.preventDefault();
 
-      tabLinks.forEach(link => link.classList.remove("active"));
+      tabLinks.forEach((link) => link.classList.remove("active"));
       clickedTab.classList.add("active");
 
       const tabId = clickedTab.dataset.tab;
-      tabPanes.forEach(pane => pane.classList.toggle("active", pane.id === tabId));
+      tabPanes.forEach((pane) =>
+        pane.classList.toggle("active", pane.id === tabId)
+      );
     });
   }
 
