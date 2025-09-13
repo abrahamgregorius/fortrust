@@ -338,13 +338,15 @@ ul {
   display: flex;
   gap: var(--space-12);
   align-items: center;
-  animation: scroll 30s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 .partners__scroller:hover .partners__logos {
   animation-play-state: paused;
 }
 .partners__logos img {
   height: 40px;
+  object-fit: cover;
+  object-position: center;
   filter: grayscale(100%);
   opacity: 0.6;
   transition: all 0.3s ease;
