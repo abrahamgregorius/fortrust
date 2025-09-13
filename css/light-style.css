@@ -1670,6 +1670,10 @@ ul {
   .partner-logo {
     border: 1px solid var(--neutral-100);
   }
+
+  .partners {
+    background-color: var(--neutral-900);
+  }
 }
 
 /* 22. LOGO SWAPPING FOR DARK MODE */
