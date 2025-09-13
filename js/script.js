@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
         img: "./public/people/Oltariani-Laswinta-Fitri.jpg",
       },
       {
-        quote: "Amazing place to study",
+        quote: "Fortrust made the whole process of deciding on a career that future proof and picking the right university program super easy. Not only did they consider what I wanted to study, but they also made sure it fit our budget.",
         author: "Joshua Moshe Djuandi",
         role: "Teesside University - Artificial Intelligence",
         img: "./public/people/Joshua-Moshe-Djuandi.jpg",
