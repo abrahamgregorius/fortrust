@@ -179,12 +179,12 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         quote: "Fortrust made the whole process of deciding on a career that future proof and picking the right university program super easy. Not only did they consider what I wanted to study, but they also made sure it fit our budget.",
         author: "Joshua Moshe Djuandi",
-        role: "Teesside University - Artificial Intelligence",
+        role: "Teesside University - Bachelor of Artificial Intelligence",
         img: "./public/people/Joshua-Moshe-Djuandi.jpg",
       },
       {
         quote:
-          "Fortrust provided excellent support throughout my University of Melbourne application process. Their queick responses and insightfuil guidance made the entire experience smooth and stress-free. They were always available to answer questions, offering personalized advice and ensuring I understood each step. Highly recommend their efficient and professional service!",
+          "Fortrust provided excellent support throughout my University of Melbourne application process. Their quick responses and insightfuil guidance made the entire experience smooth and stress-free. They were always available to answer questions, offering personalized advice and ensuring I understood each step. Highly recommend their efficient and professional service!",
         author: "Listiawati",
         role: "University of Melbourne - Bachelor of Commerce",
         img: "./public/people/Listiawati.jpg",

@@ -34,17 +34,26 @@
     <header class="header">
       <div class="container header__container">
         <a href="index.html" class="header__logo">
-          <img src="./public/logo-fortrust.png" class="logo-light" height="45" alt="" />
-              <img src="./public/logo-white.png" class="logo-dark" height="45" alt="" />
+          <img
+            src="./public/logo-fortrust.png"
+            class="logo-light"
+            height="45"
+            alt=""
+          />
+          <img
+            src="./public/logo-white.png"
+            class="logo-dark"
+            height="45"
+            alt=""
+          />
         </a>
         <nav class="nav" id="main-nav">
           <ul class="nav__list">
-            <!-- REVISI #5: Dropdown untuk Destinasi -->
             <li class="nav-item--dropdown">
               <a href="#" class="nav__link"
                 >Destinations
-                <i data-lucide="chevron-down" class="dropdown-icon"></i
-              ></a>
+                <i data-lucide="chevron-down" class="dropdown-icon"></i>
+              </a>
               <div class="dropdown-menu">
                 <a href="destination-australia.html">Australia</a>
                 <a href="destination-canada.html">Canada</a>
@@ -82,24 +91,17 @@
                 <a href="services-internship.html">Internship Program</a>
               </div>
             </li>
-            <li>
-              <a href="success.html" class="nav__link active"
-                >Success Stories</a
-              >
-            </li>
+            <!-- <li>
+              <a href="success.html" class="nav__link">Success Stories</a>
+            </li> -->
             <li class="nav-item--dropdown">
-              <a href="community.html" class="nav__link"
-                >Alumni<i
-                  data-lucide="chevron-down"
-                  class="dropdown-icon"
-                ></i
+              <a href="community.html" class="nav__link active"
+                >Alumni<i data-lucide="chevron-down" class="dropdown-icon"></i
               ></a>
               <div class="dropdown-menu">
                 <a href="success.html">Success story</a>
                 <a href="#">Work Placements</a>
-                <a href="#"
-                  >Join Our Community</a
-                >
+                <a href="#">Join Our Community</a>
               </div>
             </li>
             <!-- <li>
@@ -112,7 +114,7 @@
         <div class="header__actions">
           <div class="lang-switcher"><span>EN</span> | <a href="#">ID</a></div>
           <a href="contact.html" class="btn btn--primary">Free Consultation</a>
-          
+
           <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
             <i data-lucide="menu"></i>
           </button>
@@ -140,56 +142,85 @@
             <button class="filter-tag active" data-filter="all">
               All Stories
             </button>
-            <button class="filter-tag" data-filter="australia">
+            <!-- <button class="filter-tag" data-filter="australia">
               Australia
             </button>
-            <button class="filter-tag" data-filter="uk">UK</button>
+            <button class="filter-tag" data-filter="uk">UK</button> -->
           </div>
 
           <!-- Story Grid -->
           <div class="story-grid">
             <div class="card story-card" data-tags="uk,business">
               <img
-                src="https://via.placeholder.com/400x250/cccccc/000000?text=Anya+L."
-                alt="Photo of Anya Lestari"
+                src="./public/people/Charlotte-Erika-Javly.jpg"
+                alt="Photo of Charlotte Erika Javly"
               />
               <div class="card__content">
                 <blockquote>
-                  "Fortrust made my dream of studying in the UK a reality. Their
-                  end-to-end service was flawless."
+                  "Sangat membantu dalam memilih jurusan dan sekolah yang cocok
+                  berdasarkan dengan jurusannya. Counsellor juga sangat membantu
+                  sepanjang proses registrasi ke sekolah tersebut juga
+                  memberikan informasi yang detail."
                 </blockquote>
-                <p class="author">- Anya Lestari, UCL Alumni</p>
-                <div class="tags"><span>UK</span><span>Business</span></div>
+                <p class="author">- Charlotte Erika Javly, Amity Global Institute - Finance and Accounting</p>
+                <div class="tags"><span>Singapore</span><span>Finance</span></div>
               </div>
             </div>
             <div class="card story-card" data-tags="australia,engineering">
-              <img
-                src="https://via.placeholder.com/400x250/cccccc/000000?text=Budi+S."
-                alt="Photo of Budi Santoso"
-              />
+              <img src="./public/people/Joshua-Moshe-Djuandi.jpg" alt="Photo" />
               <div class="card__content">
                 <blockquote>
-                  "The guidance for my visa application was crystal clear. I was
-                  nervous, but the team handled everything professionally."
+                  "Fortrust made the whole process of deciding on a career that
+                  future proof and picking the right university program super
+                  easy. Not only did they consider what I wanted to study, but
+                  they also made sure it fit our budget."
                 </blockquote>
-                <p class="author">- Budi Santoso, Monash University</p>
+                <p class="author">
+                  - Joshua Moshe Djuandi, Teesside University - Bachelor of
+                  Artificial Intelligence
+                </p>
                 <div class="tags">
-                  <span>Australia</span><span>Engineering</span>
+                  <span>UK</span><span>Artificial Intelligence</span>
+                </div>
+              </div>
+            </div>
+            <div class="card story-card" data-tags="australia,business">
+              <img src="./public/people/Listiawati.jpg" alt="Photo" />
+              <div class="card__content">
+                <blockquote>
+                  "Fortrust provided excellent support throughout my University
+                  of Melbourne application process. Their quick responses and
+                  insightfuil guidance made the entire experience smooth and
+                  stress-free. They were always available to answer questions,
+                  offering personalized advice and ensuring I understood each
+                  step. Highly recommend their efficient and professional
+                  service!"
+                </blockquote>
+                <p class="author">
+                  - Listiawati, University of Melbourne - Bachelor of Commerce
+                </p>
+                <div class="tags">
+                  <span>Australia</span><span>Commerce</span>
                 </div>
               </div>
             </div>
             <div class="card story-card" data-tags="australia,business">
               <img
-                src="https://via.placeholder.com/400x250/cccccc/000000?text=Wijaya+Family"
-                alt="Photo of Wijaya Family"
+                src="./public/people/Oltariani-Laswinta-Fitri.jpg"
+                alt="Photo"
               />
               <div class="card__content">
                 <blockquote>
-                  "As parents, we needed reassurance. Fortrust provided all the
-                  answers and secured great accommodation for our son."
+                  "All good with Fortrust, I got advice and suggestions that I
+                  needed during application to NZ universities. Fortrust staff,
+                  mbak Sarah also have assisted me throughout my application
+                  journey to several universities until I decided AIS is the
+                  most suitable for me. I'm thankful to be given the opportunity
+                  to live my NZ dreams with my family. Thank you, Fortrust!"
                 </blockquote>
                 <p class="author">
-                  - Mr. & Mrs. Wijaya, Parents of UNSW Student
+                  - Oltariani Laswinta Fitri, Auckland Institute of Studies -
+                  Master of Business
                 </p>
                 <div class="tags">
                   <span>Australia</span><span>Business</span>
