@@ -1273,6 +1273,24 @@ ul {
   position: absolute;
 }
 
+.carousel-slide-text {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 5rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+}
+
+
 .carousel-slide.active {
   opacity: 1;
 }
@@ -1679,7 +1697,7 @@ ul {
     background-color: var(--neutral-900);
     color: var(--bg);
   }
-  
+
   .final-cta .btn--primary:hover {
     background-color: var(--bg);
     color: var(--neutral-900);
