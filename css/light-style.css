@@ -1674,6 +1674,16 @@ ul {
   .partners {
     background-color: #ffffff;
   }
+
+  .final-cta .btn--primary {
+    background-color: var(--neutral-900);
+    color: var(--bg);
+  }
+  
+  .final-cta .btn--primary:hover {
+    background-color: var(--bg);
+    color: var(--neutral-900);
+  }
 }
 
 /* 22. LOGO SWAPPING FOR DARK MODE */
