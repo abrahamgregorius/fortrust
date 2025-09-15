@@ -1696,13 +1696,13 @@ ul {
   }
 
   .final-cta .btn--primary {
-    background-color: var(--neutral-900);
-    color: var(--bg);
+    background-color: var(--accent);
+    color: var(--neutral-900);
   }
 
   .final-cta .btn--primary:hover {
-    background-color: var(--bg);
-    color: var(--neutral-900);
+    background-color: var(--neutral-900);
+    color: var(--accent);
   }
 }
 
