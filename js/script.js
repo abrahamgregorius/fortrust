@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Mobile dropdown toggle logic for each dropdown item
-    elements.dropdownItems.forEach((item) => {
+    elements.dropdownItems.forEach((item) => {  
       const link = item.querySelector(".nav__link");
       link.addEventListener("click", function (e) {
         // Only activate click behavior on mobile
