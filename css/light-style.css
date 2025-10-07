@@ -13,6 +13,7 @@
   --neutral-400: #94a3b8;
   --neutral-100: #f1f5f9;
   --bg: #ffffff;
+  --bg-slide: #ffffff65;
   --font-primary: "Montserrat", sans-serif;
   --space-1: 4px;
   --space-2: 8px;
@@ -1319,12 +1320,18 @@ ul {
 
 .slide-content h1 {
   color: var(--brand-700);
+  padding: 0 0.5rem;
+  border-radius: .4rem;
+  background-color: var(--bg-slide);
   font-size: 3.5rem;
   margin-bottom: var(--space-4);
 }
 
 .slide-content .subhead {
   color: var(--brand-700);
+  padding: 0 0.5rem;
+  border-radius: .4rem;
+  background-color: var(--bg-slide);
   opacity: 0.9;
   font-size: 1.25rem;
   margin-bottom: var(--space-8);
@@ -1680,6 +1687,7 @@ ul {
     --neutral-400: #64748b;
     --neutral-100: #1e293b;
     --bg: #0f172a; /* Dark background */
+    --bg-slide: #0f172a50; /* Dark background */
   }
 
   .header {
