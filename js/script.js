@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "Fortrust provided excellent support throughout my University of Melbourne application process. Their quick responses and insightfuil guidance made the entire experience smooth and stress-free. They were always available to answer questions, offering personalized advice and ensuring I understood each step. Highly recommend their efficient and professional service!",
         author: "Listiawati",
         role: "University of Melbourne - Bachelor of Commerce",
-        img: "./public/people/Listiawati.jpg",
+        img: "./public/people/Listiawati.png",
       },
       {
         quote:
