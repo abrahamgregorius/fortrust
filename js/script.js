@@ -171,6 +171,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const testimonials = [
       {
         quote:
+          "Fortrust provided all the excellent help and support throughout my application to Beijing Institute of Technology. Starting with preparing for the entrance exam and even the interview, they made the entire process much easier and not stressful. Their guidance was clear, professional, and fulfilling to my needs. I truly appreciate their dedication and support, I would highly recommend Fortrust to anyone planning to study abroad. Thank you fortrust!",
+        author: "Kenneth Tjandra",
+        role: "Beijing Institute of Technology - Bachelor of International Trade and Economics",
+        img: "./public/people/Kenneth-Tjandra.jpg",
+      },
+      {
+        quote:
           "All good with Fortrust, I got advice and suggestions that I needed during application to NZ universities. Fortrust staff, mbak Sarah also have assisted me throughout my application journey to several universities until I decided AIS is the most suitable for me. I'm thankful to be given the opportunity to live my NZ dreams with my family. Thank you, Fortrust!",
         author: "Oltariani Laswinta Fitri",
         role: "Auckland Institute of Studies - Master of Business",
